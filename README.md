@@ -1,4 +1,4 @@
-# Projeto profissional sobre Saúde dos Pés
+# Projeto Freelancer sobre Móveis Planejados
 
 Projeto ainda em desenvolvimento e terá suas atualizações semanais sobre toda atualização de código, testes unitários de componentes e a lógica com uso de tipagem TypeScript.
 
