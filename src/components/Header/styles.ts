@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { slideIn } from '../Main/styles';
 
 export const StyledHeader = styled.header`
 	background: black;
@@ -36,7 +37,7 @@ export const HeaderTitle = styled.h1`
 
 export const ButtonsWrapper = styled.div`
 	display: flex;
-	gap: 0.2rem;
+	gap: 0.4rem;
 `;
 
 export const OrçButton = styled.button`

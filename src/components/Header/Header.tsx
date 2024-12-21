@@ -10,7 +10,7 @@ export const Header: React.FC = () => {
 					<S.StyledIcon
 						src={LogoIcon}
 						alt='EliasMelloLogo'
-						title='EliasMello Inovation&Design'
+						title='EliasMello InnovationInDesign'
 					/>
 				</S.HeaderTitle>
 
