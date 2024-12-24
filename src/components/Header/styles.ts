@@ -56,7 +56,7 @@ export const OrçButton = styled.button`
 		position: absolute;
 		width: 0;
 		height: 2px;
-		background-color: orange;
+		background-color: #ea8a01;
 		left: 0;
 		bottom: 0;
 		transition: width 0.4s ease-in-out;

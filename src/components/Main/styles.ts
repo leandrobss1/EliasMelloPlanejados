@@ -51,12 +51,12 @@ export const TextOverlay = styled.div`
 `;
 
 export const MainTitle = styled.h1`
-	font-size: 2em;
+	font-size: 2rem;
 	width: 50%;
 `;
 
 export const MainParagraph = styled.p`
-	font-size: 1.2em;
+	font-size: 1.3rem;
 	padding: 2rem;
 	width: 65%;
 `;
