@@ -1,8 +1,7 @@
 import styled from 'styled-components';
-import { slideIn } from '../Main/styles';
 
 export const StyledHeader = styled.header`
-	background: black;
+	background: #131010;
 	width: 100%;
 	height: auto;
 `;
@@ -74,7 +73,7 @@ export const Button = styled.button`
 	cursor: pointer;
 	font-size: 1rem;
 	font-weight: 400;
-	background-color: black;
+	background-color: #131010;
 	position: relative;
 
 	&::after {

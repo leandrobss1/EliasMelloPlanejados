@@ -21,7 +21,7 @@ export const CardContainer = styled.div`
 	width: 100%;
 	height: auto;
 	padding-top: 1rem;
-	background-color: white;
+	background-color: #131010;
 `;
 
 export const CardsWrapper = styled.div`
@@ -33,7 +33,9 @@ export const CardsWrapper = styled.div`
 export const CardsTitle = styled.h1`
 	text-align: center;
 	margin-bottom: 1rem;
-	font-weight: 300;
+	font-weight: 400;
+	color: #ccc;
+	font-family: 'Montserrat', serif;
 
 	strong {
 		color: #ea8a01;
@@ -49,6 +51,7 @@ export const Card = styled.div`
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 	transition: transform 0.2s;
 	margin: 2rem;
+	background-color: #fffdf0;
 
 	&:hover {
 		transform: scale(1.05);
@@ -68,7 +71,7 @@ export const CardContent = styled.div`
 `;
 
 export const CardTitle = styled.h2`
-	font-size: 1.5em;
+	font-size: 1.5rem;
 	margin-bottom: 1rem;
 	text-align: center;
 `;
@@ -76,5 +79,5 @@ export const CardTitle = styled.h2`
 export const CardParagraph = styled.p`
 	font-size: 1rem;
 	text-align: center;
-	color: #555;
+	color: black;
 `;
