@@ -21,7 +21,7 @@ export const CardContainer = styled.div`
 	width: 100%;
 	height: auto;
 	padding-top: 1rem;
-	background-color: #131010;
+	background-color: whitesmoke;
 `;
 
 export const CardsWrapper = styled.div`
@@ -34,7 +34,7 @@ export const CardsTitle = styled.h1`
 	text-align: center;
 	margin-bottom: 1rem;
 	font-weight: 400;
-	color: #ccc;
+	color: black;
 	font-family: 'Montserrat', serif;
 
 	strong {
