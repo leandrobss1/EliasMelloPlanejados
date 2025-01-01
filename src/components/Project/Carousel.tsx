@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import * as S from './styles';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import img1 from '../img/1c.jpg';
-import img2 from '../img/2c.jpg';
-import img3 from '../img/3c.jpg';
-import img4 from '../img/4c.jpg';
-import img5 from '../img/5c.jpg';
+import img1 from '../../assets/img/1c.jpg';
+import img2 from '../../assets/img/2c.jpg';
+import img3 from '../../assets/img/3c.jpg';
+import img4 from '../../assets/img/4c.jpg';
+import img5 from '../../assets/img/5c.jpg';
 
 export const Carousel: React.FC = () => {
 	const [slidePerView, setSlidePerView] = useState(3);

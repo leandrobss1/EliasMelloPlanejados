@@ -4,6 +4,7 @@ import { GlobalStyles } from './styles/GlobalStyles';
 import { Main } from './components/Main/Main';
 import Cards from './components/Cards/Cards';
 import { Carousel } from './components/Project/Carousel';
+import ScrollToTop from './components/ScrollButton/Scroll';
 
 function App() {
 	return (
@@ -13,6 +14,8 @@ function App() {
 			<Main />
 			<Cards />
 			<Carousel />
+
+			<ScrollToTop />
 		</>
 	);
 }

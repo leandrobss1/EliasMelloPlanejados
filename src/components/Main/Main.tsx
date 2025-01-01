@@ -1,16 +1,12 @@
 import React from 'react';
 import * as S from './styles';
-import LogoHeader from '../img/bg-header.png';
+import BgHeader from '../../assets/img/bg-header.png';
 
 export const Main: React.FC = () => {
 	return (
 		<S.MainContainer>
 			<S.ImageWrapper>
-				<S.MainImage
-					src={LogoHeader}
-					alt='background-main'
-					className='fade-in'
-				/>
+				<S.MainImage src={BgHeader} alt='background-main' className='fade-in' />
 				<S.TextOverlay className='slide-in'>
 					<S.MainTitle>
 						Está em busca de móveis planejados de alto padrão?

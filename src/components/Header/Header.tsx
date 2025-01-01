@@ -1,6 +1,6 @@
 import React from 'react';
 import * as S from './styles';
-import LogoIcon from '../img/lg-elias.png';
+import LogoIcon from '../../assets/img/lg-elias.png';
 
 export const Header: React.FC = () => {
 	return (
