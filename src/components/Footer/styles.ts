@@ -45,6 +45,10 @@ export const FooterInnerWrapper = styled.div`
 	flex-direction: row;
 	align-items: center;
 	gap: 13rem;
+
+	:last-child {
+		width: auto;
+	}
 `;
 
 export const FooterData = styled.h1`
