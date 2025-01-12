@@ -21,7 +21,7 @@ export const CardContainer = styled.div`
 	width: 100%;
 	height: auto;
 	padding-top: 1rem;
-	background-color: whitesmoke;
+	background-color: #eff3ea;
 `;
 
 export const CardsWrapper = styled.div`

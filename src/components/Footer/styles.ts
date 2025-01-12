@@ -3,7 +3,8 @@ import styled from 'styled-components';
 export const FooterWrapper = styled.div`
 	width: 100%;
 	height: auto;
-	background-color: #fffdf0;
+	background-color: #eff3ea;
+	margin-top: 2rem;
 `;
 
 export const FooterParagraph = styled.p`
