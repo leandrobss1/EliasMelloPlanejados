@@ -29,6 +29,16 @@ export const Google: React.FC = () => {
 					alt='first-commit'
 					title='google-comment'
 				/>
+				<S.GoogleComments
+					src={Commets1}
+					alt='first-commit'
+					title='google-comment'
+				/>
+				<S.GoogleComments
+					src={Commets2}
+					alt='first-commit'
+					title='google-comment'
+				/>
 			</S.GoogleWrapperContainer>
 		</S.GoogleWrapper>
 	);

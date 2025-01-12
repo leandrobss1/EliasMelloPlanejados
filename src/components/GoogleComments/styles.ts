@@ -22,15 +22,14 @@ export const GoogleWrapperContainer = styled.div`
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	width: 50%;
+	width: 75%;
 	gap: 1rem;
 `;
 
 export const GoogleComments = styled.img`
-	flex: 0 0 calc(50% - 0.5rem);
+	flex: 0 0 calc(33% - 0.5rem);
 	padding: 0.8rem;
 	width: 100%;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
 	&:hover {
 		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);

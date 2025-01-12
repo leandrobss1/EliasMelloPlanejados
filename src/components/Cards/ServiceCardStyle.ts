@@ -21,7 +21,7 @@ export const CardContainer = styled.div`
 	width: 100%;
 	height: auto;
 	padding-top: 1rem;
-	background-color: #eff3ea;
+	background-color: white;
 `;
 
 export const CardsWrapper = styled.div`
@@ -45,13 +45,12 @@ export const CardsTitle = styled.h1`
 export const Card = styled.div`
 	width: 300px;
 	height: 400px;
-	border: 1px solid #ccc;
 	border-radius: 2px;
 	overflow: hidden;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 	transition: transform 0.2s;
 	margin: 2rem;
-	background-color: #fffdf0;
+	background-color: #eff3ea;
 
 	&:hover {
 		transform: scale(1.05);

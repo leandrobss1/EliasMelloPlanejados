@@ -62,6 +62,7 @@ export const OrçButton = styled.button`
 	}
 
 	&:hover {
+		background-color: #ea6a02;
 		color: black;
 	}
 `;

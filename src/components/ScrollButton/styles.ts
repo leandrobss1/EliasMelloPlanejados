@@ -18,6 +18,7 @@ export const ScrollToTopButton = styled.button`
 	z-index: 1000;
 
 	&:hover {
+		background-color: #ea6a02;
 		color: black;
 		box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 	}
