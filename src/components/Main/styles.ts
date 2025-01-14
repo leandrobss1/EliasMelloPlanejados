@@ -1,14 +1,15 @@
 import styled, { keyframes } from 'styled-components';
 
+// Animações
 export const fadeIn = keyframes` 
-	from { opacity: 0; } 
-	to { opacity: 1; } 
+  from { opacity: 0; } 
+  to { opacity: 1; } 
 `;
 
 export const slideIn = keyframes` 
-	from { transform: translateY(20px); opacity: 0; } 
-	to { transform: translateY(0); opacity: 1; }
- `;
+  from { transform: translateY(20px); opacity: 0; } 
+  to { transform: translateY(0); opacity: 1; }
+`;
 
 export const MainContainer = styled.div`
 	display: flex;
@@ -17,6 +18,7 @@ export const MainContainer = styled.div`
 	flex-direction: column;
 	width: 100%;
 	height: 100vh;
+	position: relative;
 `;
 
 export const ImageWrapper = styled.div`
@@ -28,6 +30,7 @@ export const ImageWrapper = styled.div`
 	height: 100%;
 	overflow: hidden;
 	animation: ${fadeIn} 1.5s ease-in-out;
+	z-index: 0;
 `;
 
 export const MainImage = styled.img`
@@ -48,15 +51,32 @@ export const TextOverlay = styled.div`
 	margin-bottom: 13rem;
 	width: 70%;
 	animation: ${slideIn} 1.5s ease-in-out;
+	z-index: 2;
+
+	@media (max-width: 768px) {
+		width: 90%;
+		margin-bottom: 6rem;
+	}
 `;
 
 export const MainTitle = styled.h1`
 	font-size: 2rem;
 	width: 50%;
+
+	@media (max-width: 768px) {
+		font-size: 1.5rem;
+		width: 80%;
+	}
 `;
 
 export const MainParagraph = styled.p`
 	font-size: 1.3rem;
 	padding: 2rem;
 	width: 65%;
+
+	@media (max-width: 768px) {
+		font-size: 1rem;
+		padding: 1.5rem;
+		width: 90%;
+	}
 `;
