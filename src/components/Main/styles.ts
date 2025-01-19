@@ -1,6 +1,5 @@
 import styled, { keyframes } from 'styled-components';
 
-// Animações
 export const fadeIn = keyframes` 
   from { opacity: 0; } 
   to { opacity: 1; } 
@@ -19,6 +18,7 @@ export const MainContainer = styled.div`
 	width: 100%;
 	height: 100vh;
 	position: relative;
+	overflow: hidden;
 `;
 
 export const ImageWrapper = styled.div`
@@ -35,7 +35,8 @@ export const ImageWrapper = styled.div`
 
 export const MainImage = styled.img`
 	width: 100%;
-	height: auto;
+	height: 100%;
+	object-fit: cover;
 `;
 
 export const TextOverlay = styled.div`
@@ -63,8 +64,13 @@ export const MainTitle = styled.h1`
 	font-size: 2rem;
 	width: 50%;
 
-	@media (max-width: 768px) {
+	@media (max-width: 930px) and (min-width: 768px) {
 		font-size: 1.5rem;
+		width: 80%;
+	}
+
+	@media (max-width: 750px) and (min-width: 50px) {
+		font-size: 1.3rem;
 		width: 80%;
 	}
 `;

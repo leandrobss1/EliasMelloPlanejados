@@ -207,7 +207,7 @@ export const Menu = styled.div<{ isMenuOpen: boolean }>`
 		top: 70px;
 		right: 0;
 		background-color: #131010;
-		width: 40%;
+		width: 24%;
 		padding: 1rem;
 		align-items: center;
 		gap: 1.5rem;
