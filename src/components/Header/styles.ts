@@ -158,15 +158,15 @@ export const HamburgerIcon = styled.div`
 	height: 25px;
 	cursor: pointer;
 	transition: transform 0.3s ease;
-	position: fixed;
-	top: 20px;
-	right: 20px;
+	position: relative;
+	top: 5px;
+	right: -2px;
 	z-index: 20;
 
 	div {
 		width: 25px;
 		height: 3px;
-		background-color: white;
+		background-color: #ea6a02;
 		border-radius: 5px;
 		transition: transform 0.3s ease, opacity 0.3s ease;
 	}

@@ -16,6 +16,26 @@ export const GoogleTitle = styled.h1`
 	font-weight: 300;
 	padding: 2rem;
 	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&::before,
+	&::after {
+		content: '';
+		flex: 1;
+		height: 2px;
+		background-color: black;
+		margin: 0 1rem;
+	}
+
+	&::before {
+		margin-right: 1rem;
+	}
+
+	&::after {
+		margin-left: 1rem;
+	}
 `;
 
 export const GoogleWrapperContainer = styled.div`
@@ -24,6 +44,10 @@ export const GoogleWrapperContainer = styled.div`
 	justify-content: center;
 	width: 75%;
 	gap: 1rem;
+
+	@media (max-width: 768px) {
+		width: 100%;
+	}
 `;
 
 export const GoogleComments = styled.img`
@@ -32,7 +56,15 @@ export const GoogleComments = styled.img`
 	width: 100%;
 
 	&:hover {
-		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-		transition: 0.1s;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		transition: 0.3s;
+	}
+
+	@media (max-width: 768px) {
+		flex: 0 0 calc(50% - 0.5rem);
+	}
+
+	@media (max-width: 480px) {
+		flex: 0 0 calc(100% - 0.5rem);
 	}
 `;

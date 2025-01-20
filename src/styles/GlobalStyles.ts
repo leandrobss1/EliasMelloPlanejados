@@ -9,9 +9,13 @@ export const GlobalStyles = createGlobalStyle`
 
 }
 
-html, body {
-height: 100%;
-width: 100%;
-overflow-x: hidden;
+html {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    min-height: 100%; 
+    overflow-x: hidden; 
 }
 `;
