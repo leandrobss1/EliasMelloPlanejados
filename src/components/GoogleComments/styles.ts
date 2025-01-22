@@ -60,11 +60,11 @@ export const GoogleComments = styled.img`
 		transition: 0.3s;
 	}
 
-	@media (max-width: 768px) {
-		flex: 0 0 calc(50% - 0.5rem);
+	@media (max-width: 930px) and (min-width: 750px) {
+		flex: 0 0 calc(50% - 0.4rem);
 	}
 
-	@media (max-width: 480px) {
-		flex: 0 0 calc(100% - 0.5rem);
+	@media (max-width: 749px) and (min-width: 50px) {
+		flex: 0 0 calc(50% - 0.3rem);
 	}
 `;

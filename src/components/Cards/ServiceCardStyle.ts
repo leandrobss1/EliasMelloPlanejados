@@ -29,7 +29,7 @@ export const CardsWrapper = styled.div`
 	justify-content: center;
 	width: 100%;
 
-	@media (max-width: 930px) and (min-width: 768px) {
+	@media (max-width: 930px) and (min-width: 750px) {
 		width: 100%;
 	}
 
@@ -50,12 +50,12 @@ export const CardsTitle = styled.h1`
 		color: #ea8a01;
 	}
 
-	@media (max-width: 930px) and (min-width: 425px) {
+	@media (max-width: 930px) and (min-width: 750px) {
 		font-size: 1.5rem;
 		width: 80%;
 	}
 
-	@media (max-width: 425px) and (min-width: 50px) {
+	@media (max-width: 750px) and (min-width: 50px) {
 		font-size: 1.3rem;
 		width: 80%;
 	}
@@ -78,6 +78,16 @@ export const Card = styled.div`
 		transition: 0.4s;
 		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 	}
+
+	@media (max-width: 421px) and (min-width: 375px) {
+		width: 50%;
+		height: auto;
+	}
+
+	@media (max-width: 375px) and (min-width: 320px) {
+		width: 80%;
+		height: auto;
+	}
 `;
 
 export const CardImage = styled.img`
@@ -91,12 +101,12 @@ export const CardContent = styled.div`
 	height: calc(100% - 200px);
 	box-sizing: border-box;
 
-	@media (max-width: 930px) and (min-width: 425px) {
+	@media (max-width: 930px) and (min-width: 750px) {
 		width: 300px;
 	}
 
-	@media (max-width: 425px) and (min-width: 50px) {
-		width: 80%;
+	@media (max-width: 750px) and (min-width: 50px) {
+		width: 100%;
 	}
 `;
 
@@ -105,12 +115,12 @@ export const CardTitle = styled.h2`
 	margin-bottom: 1rem;
 	text-align: center;
 
-	@media (max-width: 930px) and (min-width: 425px) {
+	@media (max-width: 930px) and (min-width: 750px) {
 		font-size: 1rem;
 		width: 40%;
 	}
 
-	@media (max-width: 750px) and (min-width: 399px) {
+	@media (max-width: 750px) and (min-width: 50px) {
 		font-size: 1.2rem;
 		width: 100%;
 	}
@@ -121,7 +131,7 @@ export const CardParagraph = styled.p`
 	text-align: center;
 	color: black;
 
-	@media (max-width: 930px) and (min-width: 425px) {
+	@media (max-width: 930px) and (min-width: 750px) {
 		font-size: 0.8rem;
 		width: 40%;
 	}

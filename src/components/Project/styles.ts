@@ -16,8 +16,20 @@ export const CarouselContainer = styled.div`
 		}
 	}
 
-	@media (max-width: 750px) and (min-width: 50px) {
+	@media (max-width: 750px) and (min-width: 387px) {
 		width: 100%;
+
+		img {
+			height: 32rem;
+		}
+	}
+
+	@media (max-width: 386px) and (min-width: 50px) {
+		width: 100%;
+
+		img {
+			height: 27rem;
+		}
 	}
 `;
 
@@ -41,7 +53,7 @@ export const CarouselTitle = styled.h1`
 
 	@media (max-width: 750px) and (min-width: 50px) {
 		font-size: 1.3rem;
-		width: 80%;
+		width: 100%;
 	}
 `;
 

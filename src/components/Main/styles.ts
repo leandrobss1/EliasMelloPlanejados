@@ -85,4 +85,10 @@ export const MainParagraph = styled.p`
 		padding: 1.5rem;
 		width: 90%;
 	}
+
+	strong {
+		@media (max-width: 930px) and (min-width: 50px) {
+			color: #ea8a01;
+		}
+	}
 `;

@@ -159,8 +159,6 @@ export const HamburgerIcon = styled.div`
 	cursor: pointer;
 	transition: transform 0.3s ease;
 	position: relative;
-	top: 5px;
-	right: -2px;
 	z-index: 20;
 
 	div {
@@ -185,10 +183,13 @@ export const HamburgerIcon = styled.div`
 
 	@media (max-width: 768px) {
 		display: flex;
+		position: absolute;
+		right: 1.5rem;
 	}
 
-	@media (max-width: 500px) {
-		right: 15px;
+	@media (max-width: 480px) {
+		top: 23px;
+		right: 1rem;
 	}
 `;
 
@@ -207,7 +208,7 @@ export const Menu = styled.div<{ isMenuOpen: boolean }>`
 		top: 70px;
 		right: 0;
 		background-color: #131010;
-		width: 24%;
+		width: 20%;
 		padding: 1rem;
 		align-items: center;
 		gap: 1.5rem;
@@ -215,12 +216,17 @@ export const Menu = styled.div<{ isMenuOpen: boolean }>`
 		z-index: 10;
 	}
 
-	@media (max-width: 480px) {
-		width: 40%;
+	@media (max-width: 669px) and (min-width: 479px) {
 		top: 60px;
+		width: 30%;
 	}
 
-	@media (min-width: 1024px) {
+	@media (max-width: 479px) and (min-width: 300px) {
+		top: 60px;
+		width: 53%;
+	}
+
+	/* @media (min-width: 1024px) {
 		display: flex;
 		flex-direction: row;
 		position: relative;
@@ -230,7 +236,7 @@ export const Menu = styled.div<{ isMenuOpen: boolean }>`
 		width: auto;
 		padding: 0;
 		gap: 2rem;
-	}
+	} */
 `;
 
 export const MenuButton = styled.button`
