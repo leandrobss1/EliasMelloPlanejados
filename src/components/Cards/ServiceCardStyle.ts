@@ -31,6 +31,7 @@ export const CardsWrapper = styled.div`
 
 	@media (max-width: 930px) and (min-width: 750px) {
 		width: 100%;
+		height: 460px;
 	}
 
 	@media (max-width: 750px) and (min-width: 50px) {
@@ -103,6 +104,7 @@ export const CardContent = styled.div`
 
 	@media (max-width: 930px) and (min-width: 750px) {
 		width: 300px;
+		height: calc(100% - 100px);
 	}
 
 	@media (max-width: 750px) and (min-width: 50px) {

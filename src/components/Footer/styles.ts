@@ -5,6 +5,13 @@ export const FooterWrapper = styled.div`
 	height: auto;
 	background-color: #eff3ea;
 	margin-top: 2rem;
+
+	@media (max-width: 1215px) and (min-width: 768px) {
+		display: inline;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+	}
 `;
 
 export const FooterParagraph = styled.p`
@@ -24,8 +31,12 @@ export const FooterParagraphButton = styled.p`
 	color: black;
 	transition: 0.1s;
 
+	a {
+		color: black;
+	}
+
 	:hover {
-		color: #ea8a01;
+		color: #ea6a02;
 	}
 `;
 
@@ -35,6 +46,10 @@ export const FooterWrapperData = styled.div`
 	align-items: center;
 	width: 100%;
 	height: auto;
+
+	@media (max-width: 1215px) and (min-width: 768px) {
+		width: 70%;
+	}
 `;
 
 export const FooterInnerWrapper = styled.div`
@@ -49,6 +64,10 @@ export const FooterInnerWrapper = styled.div`
 
 	:last-child {
 		width: auto;
+	}
+
+	@media (max-width: 1215px) and (min-width: 768px) {
+		width: 70%;
 	}
 `;
 

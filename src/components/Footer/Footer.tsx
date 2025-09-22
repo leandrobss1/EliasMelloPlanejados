@@ -24,9 +24,18 @@ export const Footer: React.FC = () => {
 					<S.FooterData>
 						Siga-nos
 						<S.FooterParagraphButton>
-							<TfiInstagram />
-							<TfiFacebook />
-							<SiWhatsapp />
+							<a
+								href='https://www.instagram.com/eliasmellodesign/'
+								target='_blank'
+							>
+								<TfiInstagram />
+							</a>
+							<a href=''>
+								<TfiFacebook />
+							</a>
+							<a href='https://api.whatsapp.com/send?phone=5561991670848'>
+								<SiWhatsapp />
+							</a>
 						</S.FooterParagraphButton>
 					</S.FooterData>
 				</S.FooterInnerWrapper>
@@ -39,7 +48,7 @@ export const Footer: React.FC = () => {
 						title='EliasMello InnovationInDesign'
 					/>
 					<S.FooterParagraph>
-						© EliasMello Planejados 2024 . Todos os direitos reservados.
+						© EliasMello Planejados 2025 . Todos os direitos reservados.
 					</S.FooterParagraph>
 				</S.FooterInnerWrapper>
 			</S.FooterReserved>
