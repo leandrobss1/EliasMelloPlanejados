@@ -22,17 +22,17 @@ export const Footer: React.FC = () => {
 						<S.FooterParagraph>(61) 99167-0848 Luan Elias</S.FooterParagraph>
 					</S.FooterData>
 					<S.FooterData>
-						Siga-nos
+						Siga-nos!
 						<S.FooterParagraphButton>
 							<a
 								href='https://www.instagram.com/eliasmellodesign/'
 								target='_blank'
+								rel='noopener noreferrer'
+								aria-label='Instagram'
 							>
 								<TfiInstagram />
 							</a>
-							<a href=''>
-								<TfiFacebook />
-							</a>
+							<TfiFacebook />
 							<a href='https://api.whatsapp.com/send?phone=5561991670848'>
 								<SiWhatsapp />
 							</a>
