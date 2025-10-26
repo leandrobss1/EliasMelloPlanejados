@@ -5,7 +5,6 @@ import { Main } from './components/Main/Main';
 import Cards from './components/Cards/Cards';
 import { Carousel } from './components/Project/Carousel';
 import ScrollToTop from './components/ScrollButton/Scroll';
-import { Footer } from './components/Footer/Footer';
 import { Google } from './components/GoogleComments/Google';
 
 function App() {
@@ -19,7 +18,6 @@ function App() {
 
 			<ScrollToTop />
 			<Google />
-			<Footer />
 		</>
 	);
 }
