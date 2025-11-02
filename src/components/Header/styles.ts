@@ -71,6 +71,9 @@ export const ButtonsWrapper = styled.div`
 `;
 
 export const OrçButton = styled.button`
+	display: flex;
+  	align-items: center;
+  	justify-content: center;
 	border: none;
 	height: 40px;
 	padding: 0 1rem;
@@ -80,6 +83,7 @@ export const OrçButton = styled.button`
 	font-weight: 400;
 	background-color: orange;
 	position: relative;
+	text-decoration: none;
 
 	&::after {
 		content: '';
@@ -109,6 +113,9 @@ export const OrçButton = styled.button`
 `;
 
 export const Button = styled.button`
+	display: flex;
+ 	align-items: center;
+  	justify-content: center;
 	border: none;
 	height: 40px;
 	padding: 0 1rem;
@@ -118,6 +125,7 @@ export const Button = styled.button`
 	font-weight: 400;
 	background-color: #131010;
 	position: relative;
+	text-decoration: none;
 
 	&::after {
 		content: '';
