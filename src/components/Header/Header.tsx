@@ -47,6 +47,10 @@ export const Header: React.FC = () => {
             Serviços
           </S.Button>
 
+          <S.Button as={Link} to="/quemsomos" onClick={closeMenu}>
+            Quem Somos
+          </S.Button>
+
           <S.OrçButton as={Link} to="/orcamento" onClick={closeMenu}>
             Orçamento
           </S.OrçButton>

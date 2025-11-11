@@ -12,6 +12,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import QuemSomos from './pages/QuemSomos';
 
 
 register();
@@ -28,7 +29,8 @@ root.render(
           <Route index element={<Home />} />
           <Route path="produtos" element={<Produtos />} />
           <Route path="servicos" element={<Serviços />} />
-		  <Route path="orcamento" element={<Orçamento />} />
+		      <Route path="orcamento" element={<Orçamento />} />
+          <Route path='quemsomos' element={<QuemSomos/>} />
         </Route>
       </Routes>
     </BrowserRouter>
