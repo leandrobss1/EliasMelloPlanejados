@@ -2,7 +2,6 @@ import React from 'react';
 import { Header } from './components/Header/Header';
 import { GlobalStyles } from './styles/GlobalStyles';
 import ScrollToTop from './components/ScrollButton/Scroll';
-import { Google } from './components/GoogleComments/Google';
 import { Outlet, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 
