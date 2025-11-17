@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import * as S from './styles';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules';
 import img1 from '../../assets/img/1c.jpg';
 import img2 from '../../assets/img/2c.jpg';
 import img3 from '../../assets/img/3c.jpg';
@@ -43,6 +44,7 @@ export const Carousel: React.FC = () => {
 
 			<S.CarouselNavigation>
 				<Swiper
+				 	modules={[Navigation, Pagination]}
 					slidesPerView={slidePerView}
 					pagination={{ clickable: true }}
 					navigation

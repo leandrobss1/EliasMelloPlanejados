@@ -72,9 +72,9 @@ export const ButtonsWrapper = styled.div`
 
 export const OrçButton = styled.button`
 	display: flex;
-  	align-items: center;
-  	justify-content: center;
-	border: none;
+	align-items: center;
+	justify-content: center;
+	border: 2px solid transparent;
 	height: 40px;
 	padding: 0 1rem;
 	color: white;
@@ -84,6 +84,13 @@ export const OrçButton = styled.button`
 	background-color: orange;
 	position: relative;
 	text-decoration: none;
+
+	transition: 
+		transform 0.25s ease,
+		box-shadow 0.25s ease,
+		border-color 0.25s ease,
+		background-color 0.25s ease,
+		color 0.25s ease;
 
 	&::after {
 		content: '';
@@ -97,8 +104,17 @@ export const OrçButton = styled.button`
 	}
 
 	&:hover {
-		background-color: #ea6a02;
+		/* background-color: #ea6a02; */
 		color: black;
+		
+		transform: translateY(-4px);
+		box-shadow: none;
+		border-bottom: 3px solid white;
+		border-right: 3px solid white; 
+
+		&::after {
+			width: 100%; 
+		}
 	}
 
 	@media (max-width: 768px) {
@@ -111,6 +127,7 @@ export const OrçButton = styled.button`
 		height: 45px;
 	}
 `;
+
 
 export const Button = styled.button`
 	display: flex;

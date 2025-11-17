@@ -87,8 +87,7 @@ export const MainParagraph = styled.p`
 	}
 
 	strong {
-		@media (max-width: 930px) and (min-width: 50px) {
-			color: #ea8a01;
-		}
+		color: #ea8a01;
+		
 	}
 `;
