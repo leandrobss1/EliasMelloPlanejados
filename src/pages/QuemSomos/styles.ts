@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-import bg-wood from '../../assets/img/bg-wood.jpg';
 
 
 export const QSContainer = styled.div`
@@ -13,6 +12,7 @@ export const QSContainer = styled.div`
 	padding-top: 2rem;
 	position: relative;
 	overflow: hidden;
+	background-color: #dddd;
 `;
 
 export const QSTitle = styled.div`

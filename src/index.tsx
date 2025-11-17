@@ -5,8 +5,9 @@ import App from './App';
 import Home from './pages/Home';
 import Produtos from './pages/Produtos/Produtos';
 import Serviços from './pages/Serviços';
-import Orcamento from './pages/Orcamento';
 import QuemSomos from './pages/QuemSomos/QuemSomos';
+import Orcamento from './pages/Orçamento/Orcamento';
+
 
 import 'swiper/css';
 import 'swiper/css/navigation';
