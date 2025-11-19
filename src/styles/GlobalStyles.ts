@@ -1,4 +1,10 @@
 import { createGlobalStyle } from 'styled-components';
+import { keyframes } from "styled-components";
+
+export const pageFade = keyframes`
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+`;
 
 export const GlobalStyles = createGlobalStyle`
 * {
@@ -19,3 +25,5 @@ body {
     overflow-x: hidden; 
 }
 `;
+
+
