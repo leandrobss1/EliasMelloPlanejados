@@ -18,7 +18,7 @@ const imagesElias: Photo[] = [
 
 
 
-export default function QuemSomos(){
+export const QuemSomos: React.FC = () =>{
     return (
         <S.QSContainer >
             <S.QSTitle><strong>Somos a EliasMelloInnovationinDesign</strong></S.QSTitle>
@@ -33,10 +33,13 @@ export default function QuemSomos(){
             ))}
             </S.QSImagesRow>           
             
-            <S.QSParagraph>s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make.</S.QSParagraph>
-            <S.QSParagraph>s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make.</S.QSParagraph>
-            <S.QSParagraph>s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make.</S.QSParagraph>
+            <S.QSParagraph>Somos referência em móveis planejados feitos sob medida para valorizar cada detalhe da sua casa ou empresa. Trabalhamos com soluções modernas, funcionais e com excelente custo-benefício, garantindo ambientes bonitos, organizados e totalmente personalizados.</S.QSParagraph>
+
+            <S.QSParagraph>Utilizamos materiais de alta durabilidade, ferragens de primeira linha e tecnologia avançada para entregar móveis com acabamento impecável. Cada projeto é desenvolvido por profissionais qualificados, que unem criatividade e técnica para garantir o melhor resultado.</S.QSParagraph>
+
+            <S.QSParagraph>Do planejamento à instalação, oferecemos um atendimento rápido, transparente e voltado à sua satisfação. Criamos espaços inteligentes, práticos e elegantes, sempre com foco em superar expectativas. Realize seu sonho de ter móveis planejados com quem entende do assunto.</S.QSParagraph>
         </S.QSContainer>
             
     )
 }
+

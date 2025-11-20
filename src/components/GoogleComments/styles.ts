@@ -56,8 +56,8 @@ export const GoogleComments = styled.img`
 	width: 100%;
 
 	&:hover {
-		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-		transition: 0.3s;
+		box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+		transition: 0.4s;
 	}
 
 	@media (max-width: 930px) and (min-width: 750px) {

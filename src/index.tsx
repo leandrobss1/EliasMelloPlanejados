@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import App from './App';
 import Home from './pages/Home';
-import Produtos from './pages/Produtos/Produtos';
-import Serviços from './pages/Serviços';
-import QuemSomos from './pages/QuemSomos/QuemSomos';
-import Orcamento from './pages/Orçamento/Orcamento';
+import {Produtos} from './pages/Produtos/Produtos';
+import {Serviços} from './pages/Serviços/Serviços';
+import {QuemSomos} from './pages/QuemSomos/QuemSomos';
+import {Orcamento} from './pages/Orçamento/Orcamento';
 
 
 import 'swiper/css';

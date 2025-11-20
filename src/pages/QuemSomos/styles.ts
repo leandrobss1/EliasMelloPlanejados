@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import bgImage from '../../assets/img/bg-wood.png';
 import { pageFade } from "../../styles/GlobalStyles";
 
 
@@ -13,11 +12,7 @@ export const QSContainer = styled.div`
 	padding-top: 2rem;
 	position: relative;
 	overflow: hidden;
-	background-image: url(${bgImage});
-  	background-size: cover;
-  	background-position: center;
-  	background-repeat: no-repeat;
-
+	
 	animation: ${pageFade} 1.5s ease-in-out;
 
 
@@ -70,9 +65,9 @@ export const QSTitle = styled.div`
 `
 
 export const QSParagraph = styled.div`
-font-size: 1.3rem;
+	font-size: 1.4rem;
 	padding: 2rem;
-	width: 80%;
+	width: 70%;
 	text-align: center;
 
 	@media (max-width: 768px) {
@@ -82,8 +77,7 @@ font-size: 1.3rem;
 	}
 
 	strong {
-		color: #ea8a01;
-		
+		color: #ea8a01;		
 	}
 
 `

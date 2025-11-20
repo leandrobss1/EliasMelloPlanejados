@@ -3,6 +3,8 @@ import Commets1 from '../../assets/img/com-1.png';
 import Commets2 from '../../assets/img/com-2.png';
 import Commets3 from '../../assets/img/com-3.png';
 import Commets4 from '../../assets/img/com-4.png';
+import Commets5 from '../../assets/img/com-5.png';
+import Commets6 from '../../assets/img/com-6.png';
 
 export const Google: React.FC = () => {
 	return (
@@ -16,7 +18,7 @@ export const Google: React.FC = () => {
 				/>
 				<S.GoogleComments
 					src={Commets2}
-					alt='first-commit'
+					alt='second-commit'
 					title='google-comment'
 				/>
 				<S.GoogleComments
@@ -30,12 +32,12 @@ export const Google: React.FC = () => {
 					title='google-comment'
 				/>
 				<S.GoogleComments
-					src={Commets1}
+					src={Commets5}
 					alt='first-commit'
 					title='google-comment'
 				/>
 				<S.GoogleComments
-					src={Commets2}
+					src={Commets6}
 					alt='first-commit'
 					title='google-comment'
 				/>
@@ -43,3 +45,4 @@ export const Google: React.FC = () => {
 		</S.GoogleWrapper>
 	);
 };
+

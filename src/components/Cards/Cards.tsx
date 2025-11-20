@@ -6,7 +6,7 @@ import { PiSealCheckBold } from 'react-icons/pi';
 import { GiDrill } from 'react-icons/gi';
 import { TfiRulerAlt } from 'react-icons/tfi';
 
-const Cards: React.FC = () => (
+export const Cards: React.FC = () => (
 	<S.CardContainer>
 		<S.CardsTitle>
 			Nosso compromisso é entregar móveis planejados que transformam sonhos em{' '}
@@ -37,4 +37,4 @@ const Cards: React.FC = () => (
 	</S.CardContainer>
 );
 
-export default Cards;
+

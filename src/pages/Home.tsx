@@ -1,5 +1,5 @@
 import { Main } from '../components/Main/Main'
-import Cards from '../components/Cards/Cards'
+import {Cards} from '../components/Cards/Cards'
 import { Carousel } from '../components/Project/Carousel'
 import { Google } from '../components/GoogleComments/Google'
 

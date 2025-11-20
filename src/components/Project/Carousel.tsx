@@ -61,3 +61,4 @@ export const Carousel: React.FC = () => {
 		</S.CarouselContainer>
 	);
 };
+

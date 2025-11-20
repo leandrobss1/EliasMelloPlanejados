@@ -1,7 +1,7 @@
 import React from 'react';
 import * as S from './styles';
 
-export default function Produtos() {
+export const Produtos: React.FC = () => {
   return (
     <section>
       <h1>Nossos Produtos</h1>
@@ -9,3 +9,4 @@ export default function Produtos() {
     </section>
   )
 }
+

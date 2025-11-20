@@ -1,4 +1,3 @@
-// ServiceCard.tsx
 import React from 'react';
 import * as S from './ServiceCardStyle';
 
@@ -8,7 +7,7 @@ interface ServiceCardProps {
 	paragraph: string;
 }
 
-const ServiceCard: React.FC<ServiceCardProps> = ({ svg, title, paragraph }) => (
+export const ServiceCard: React.FC<ServiceCardProps> = ({ svg, title, paragraph }) => (
 	<S.Card>
 		<S.CardImageContainer>{svg}</S.CardImageContainer>
 		<S.CardContent>
