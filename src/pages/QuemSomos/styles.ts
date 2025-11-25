@@ -8,7 +8,6 @@ export const QSContainer = styled.div`
 	align-items: center;
 	flex-direction: column;
 	width: 100%;
-	height: auto;
 	padding-top: 2rem;
 	position: relative;
 	overflow: hidden;
@@ -20,7 +19,7 @@ export const QSContainer = styled.div`
 
 export const QSImagesRow = styled.div`
 	width: 100%;
-  	max-width: 1000px;
+  	max-width: 800px;
   	padding: 1rem;
   	display: grid;	
   	grid-template-columns: repeat(3, auto); 
@@ -28,7 +27,6 @@ export const QSImagesRow = styled.div`
 
 	justify-items: center;
 	align-items: center;
-
 
   @media (max-width: 1024px) {
     grid-template-columns: repeat(2, auto); 
@@ -81,3 +79,46 @@ export const QSParagraph = styled.div`
 	}
 
 `
+
+export const QSSection = styled.div`
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+`;
+
+export const QSRow = styled.div<{ reverse?: boolean }>`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+
+  flex-direction: ${({ reverse }) => (reverse ? "row-reverse" : "row")};
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+    text-align: center;
+  }
+`;
+
+export const QSImage = styled.img`
+  width: 45%;
+  border-radius: 0.3rem;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+
+  @media (max-width: 900px) {
+    width: 100%;
+  }
+`;
+
+export const QText = styled.div`
+  width: 50%;
+
+  @media (max-width: 900px) {
+    width: 100%;
+  }
+`;
+

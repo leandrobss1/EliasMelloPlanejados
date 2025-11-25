@@ -17,29 +17,48 @@ const imagesElias: Photo[] = [
 ]
 
 
+export const QuemSomos: React.FC = () => {
 
-export const QuemSomos: React.FC = () =>{
+    const text1 = `Somos referência em móveis planejados feitos sob medida para valorizar cada detalhe da sua casa ou empresa. Trabalhamos com soluções modernas, funcionais e com excelente custo-benefício.`;
+
+    const text2 = `Utilizamos materiais de alta durabilidade e tecnologia avançada para entregar móveis com acabamento impecável. Cada projeto é desenvolvido por profissionais qualificados, unindo criatividade e técnica.`;
+
     return (
-        <S.QSContainer >
-            <S.QSTitle><strong>Somos a EliasMelloInnovationinDesign</strong></S.QSTitle>
+        <S.QSContainer>
             
-            <S.QSImagesRow>
-                {imagesElias.map((Foto) => (
-                <S.QSPhoto 
-                key={Foto.id}
-                src={Foto.src}
-                alt={Foto.alt}
-                />
-            ))}
-            </S.QSImagesRow>           
-            
-            <S.QSParagraph>Somos referência em móveis planejados feitos sob medida para valorizar cada detalhe da sua casa ou empresa. Trabalhamos com soluções modernas, funcionais e com excelente custo-benefício, garantindo ambientes bonitos, organizados e totalmente personalizados.</S.QSParagraph>
+            <S.QSSection>
 
-            <S.QSParagraph>Utilizamos materiais de alta durabilidade, ferragens de primeira linha e tecnologia avançada para entregar móveis com acabamento impecável. Cada projeto é desenvolvido por profissionais qualificados, que unem criatividade e técnica para garantir o melhor resultado.</S.QSParagraph>
+                <S.QSRow>
+                    <S.QSImage 
+                        src={imagesElias[0].src} 
+                        alt="Projeto Elias Mello 1"
+                        loading="lazy"
+                    />
 
-            <S.QSParagraph>Do planejamento à instalação, oferecemos um atendimento rápido, transparente e voltado à sua satisfação. Criamos espaços inteligentes, práticos e elegantes, sempre com foco em superar expectativas. Realize seu sonho de ter móveis planejados com quem entende do assunto.</S.QSParagraph>
+                    <S.QText>
+                        <S.QSTitle>
+                            <strong>Elias Mello Innovation in Design</strong>
+                        </S.QSTitle>
+                        <S.QSParagraph>{text1}</S.QSParagraph>
+                    </S.QText>
+                </S.QSRow>
+
+                <S.QSRow reverse>
+                    <S.QText>
+                        <S.QSParagraph>{text2}</S.QSParagraph>
+                    </S.QText>
+
+                    <S.QSImage 
+                        src={imagesElias[1].src} 
+                        alt="Projeto Elias Mello 2"
+                        loading="lazy"
+                    />
+                </S.QSRow>
+
+            </S.QSSection>
+
         </S.QSContainer>
-            
-    )
-}
+    );
+};
+
 
