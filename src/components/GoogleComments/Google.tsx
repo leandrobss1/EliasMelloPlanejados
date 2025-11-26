@@ -9,7 +9,7 @@ import Commets6 from '../../assets/img/com-6.png';
 export const Google: React.FC = () => {
 	return (
 		<S.GoogleWrapper>
-			<S.GoogleTitle>Andam falando por ai...</S.GoogleTitle>
+			<S.GoogleTitle>Avaliações e Recomendações</S.GoogleTitle>
 			<S.GoogleWrapperContainer>
 				<S.GoogleComments
 					src={Commets1}
@@ -42,6 +42,7 @@ export const Google: React.FC = () => {
 					title='google-comment'
 				/>
 			</S.GoogleWrapperContainer>
+			
 		</S.GoogleWrapper>
 	);
 };

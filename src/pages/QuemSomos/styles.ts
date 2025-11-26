@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { pageFade } from "../../styles/GlobalStyles";
 
 
+
 export const QSContainer = styled.div`
 	display: flex;
 	justify-content: center;
@@ -11,7 +12,7 @@ export const QSContainer = styled.div`
 	padding-top: 2rem;
 	position: relative;
 	overflow: hidden;
-	
+	background-color: whitesmoke;
 	animation: ${pageFade} 1.5s ease-in-out;
 
 
@@ -47,9 +48,9 @@ export const QSPhoto = styled.img`
 
 export const QSTitle = styled.div`
 	font-size: 2rem;
-	width: 50%;
+	width: 100%;
 	text-align: center;
-	padding-bottom: 1rem;
+	padding: 1rem 0 0 1rem;
 
 	@media (max-width: 930px) and (min-width: 768px) {
 		font-size: 1.5rem;
@@ -65,7 +66,7 @@ export const QSTitle = styled.div`
 export const QSParagraph = styled.div`
 	font-size: 1.4rem;
 	padding: 2rem;
-	width: 70%;
+	width: 100%;
 	text-align: center;
 
 	@media (max-width: 768px) {
@@ -115,7 +116,9 @@ export const QSImage = styled.img`
 `;
 
 export const QText = styled.div`
-  width: 50%;
+  width: 47%;
+  border: solid 2px;
+  border-image: linear-gradient(45deg, #ea8a01, #000000) 1;
 
   @media (max-width: 900px) {
     width: 100%;

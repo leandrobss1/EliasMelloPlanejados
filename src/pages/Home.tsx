@@ -3,6 +3,7 @@ import {Cards} from '../components/Cards/Cards'
 import { Carousel } from '../components/Project/Carousel'
 import { Google } from '../components/GoogleComments/Google'
 import { Footer } from '../components/Footer/Footer'
+import { MapLocation } from '../components/MapLocation/MapLocation'
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <Cards />
       <Carousel />
       <Google />
+      <MapLocation/>
       <Footer/>    
 
 

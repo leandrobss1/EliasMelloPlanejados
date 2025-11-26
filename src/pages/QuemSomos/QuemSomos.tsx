@@ -43,7 +43,7 @@ export const QuemSomos: React.FC = () => {
                     </S.QText>
                 </S.QSRow>
 
-                <S.QSRow reverse>
+                <S.QSRow >
                     <S.QText>
                         <S.QSParagraph>{text2}</S.QSParagraph>
                     </S.QText>
