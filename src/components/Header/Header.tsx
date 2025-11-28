@@ -39,7 +39,7 @@ export const Header: React.FC = () => {
             Home
           </S.Button>
 
-          <S.Button as={Link} to="/produtos" onClick={closeMenu}>
+          <S.Button as={Link} to="/projetos" onClick={closeMenu}>
             Projetos
           </S.Button>
 

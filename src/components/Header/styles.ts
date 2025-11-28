@@ -77,7 +77,7 @@ export const OrçButton = styled.button`
 	border: 2px solid transparent;
 	height: 40px;
 	padding: 0 1rem;
-	color: black;
+	color: white;
 	cursor: pointer;
 	font-size: 1rem;
 	font-weight: 400;
@@ -92,24 +92,14 @@ export const OrçButton = styled.button`
 		background-color 0.25s ease,
 		color 0.25s ease;
 
-	&::after {
-		content: '';
-		position: absolute;
-		width: 0;
-		height: 2px;
-		background-color: #ea8a01;
-		left: 0;
-		bottom: 0;
-		transition: width 0.4s ease-in-out;
-	}
 
 	&:hover {
-		color: white;
+		color: black;
 		
 		transform: translateY(-4px);
 		box-shadow: none;
-		border-bottom: 3px solid white;
-		border-right: 3px solid white; 
+		border-bottom: 4px solid #c47302ff;
+		border-right: 4px solid #c47302ff; 
 
 		&::after {
 			width: 100%; 
