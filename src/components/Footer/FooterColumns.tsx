@@ -1,9 +1,8 @@
 import React from 'react'
 import * as S from './styles';
 
-export const Footer: React.FC = () =>{
+export const FooterColumns: React.FC = () => {
     return(
         <></>
     )
-}  
-
+}
