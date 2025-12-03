@@ -153,7 +153,8 @@ export const Button = styled.button`
 	}
 
 	@media (max-width: 768px) {
-		height: 35px;
+		text-align: center;	
+		height: 50px;
 		font-size: 0.9rem;
 	}
 

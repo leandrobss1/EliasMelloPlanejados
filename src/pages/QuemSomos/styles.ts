@@ -15,7 +15,6 @@ export const QSContainer = styled.div`
 	background-color: whitesmoke;
 	animation: ${pageFade} 1.5s ease-in-out;
 
-
 `;
 
 export const QSImagesRow = styled.div`
@@ -89,6 +88,7 @@ export const QSSection = styled.div`
   display: flex;
   flex-direction: column;
   gap: 4rem;
+
 `;
 
 export const QSRow = styled.div<{ reverse?: boolean }>`
@@ -101,9 +101,12 @@ export const QSRow = styled.div<{ reverse?: boolean }>`
 
   @media (max-width: 900px) {
     flex-direction: column;
+	flex-direction: ${({ reverse }) => (reverse ? "column" : "column-reverse")};
     text-align: center;
   }
 `;
+
+
 
 export const QSImage = styled.img`
   width: 45%;
@@ -111,7 +114,7 @@ export const QSImage = styled.img`
   box-shadow: 0 4px 14px rgba(0,0,0,0.1);
 
   @media (max-width: 900px) {
-    width: 100%;
+    width: 50%
   }
 `;
 
@@ -120,8 +123,13 @@ export const QText = styled.div`
   border: solid 2px;
   border-image: linear-gradient(45deg, #ea8a01, #000000) 1;
 
-  @media (max-width: 900px) {
-    width: 100%;
+   @media (max-width: 900px) {
+    width: 70%;	
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
+
 `;
 
