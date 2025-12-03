@@ -12,21 +12,22 @@ export type FooterColumnData = {
 export const footerData: FooterColumnData[] =  [
 
     {  
+        title: "Social",
+        links: [
+            {label:"LinkedIn", href:""},
+            {label:"Instagram", href:"https://www.instagram.com/eliasmellodesign/"},
+            {label:"Facebook", href:""},        
+        ],
+    },
+
+    {  
     title: "Empresa",
     links: [
-        {label:"Sobre Nós", href:""},
-        {label:"Contato", href:""},        
+        {label:"Sobre Nós", href:"/quemsomos"},
+        {label:"Contato", href:"/orcamento"},        
     ],
 },
 
-{  
-    title: "Social",
-    links: [
-        {label:"LinkedIn", href:""},
-        {label:"Instagram", href:""},
-        {label:"Facebook", href:""},        
-    ],
-},
     {  
     title: "Localização",
     links: [

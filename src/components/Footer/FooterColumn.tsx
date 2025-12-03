@@ -8,7 +8,16 @@ export function FooterColumn({ title, links }: FooterColumnData) {
 
       <S.LinkList>
         {links.map((link) => {
-          const isExternal = link.href.startsWith("http");
+          const hasHref = link.href && link.href.trim() !== "";
+          const isExternal = hasHref && link.href.startsWith("http");
+
+          if (!hasHref) {
+            return (
+              <S.LinkItem key={link.label}>
+                <S.Text>{link.label}</S.Text>
+              </S.LinkItem>
+            );
+          }
 
           return (
             <S.LinkItem key={link.label}>
