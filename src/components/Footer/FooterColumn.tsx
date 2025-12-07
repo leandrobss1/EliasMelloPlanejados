@@ -14,7 +14,7 @@ export function FooterColumn({ title, links }: FooterColumnData) {
           if (!hasHref) {
             return (
               <S.LinkItem key={link.label}>
-                <S.Text>{link.label}</S.Text>
+                <S.Text noHover={link.noHover}>{link.label}</S.Text>
               </S.LinkItem>
             );
           }
@@ -25,6 +25,8 @@ export function FooterColumn({ title, links }: FooterColumnData) {
                 href={link.href}
                 target={isExternal ? "_blank" : "_self"}
                 rel={isExternal ? "noopener noreferrer" : undefined}
+                noHover={link.noHover}
+
               >
                 {link.label}
               </S.Link>

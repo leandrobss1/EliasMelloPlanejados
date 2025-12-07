@@ -1,8 +1,13 @@
+import React from 'react'
+import * as S from './styles';
+
 export const Serviços: React.FC = () => {
   return (
-    <section>
-      <h1>Nossos Produtos</h1>
-      <p>Conheça alguns de nossos serviços.</p>
-    </section>
+    <S.ServContainer>
+      <S.ServTitle>Nossos Produtos</S.ServTitle>
+      <S.ServParagraph>Conheça alguns de nossos serviços.</S.ServParagraph>
+
+      
+    </S.ServContainer>
   )
 }
