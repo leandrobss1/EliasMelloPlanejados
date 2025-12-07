@@ -68,13 +68,14 @@ export const Card = styled.div`
 	border-radius: 2px;
 	overflow: hidden;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-	transition: transform 0.2s;
+	transition: transform 0.3s;
 	margin: 2rem;
-	background-color: #eff3ea;
+	background-color: #f5f5f5ff;
+	border-radius: 5%;
 
 	&:hover {
-		transform: scale(1.05);
-		background-color: #ff9d23;
+		transform: translateY(-5px);
+  		background: linear-gradient(35deg, #d17f04ff, #ff9704ff);
 		color: black;
 		transition: 0.4s;
 		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);

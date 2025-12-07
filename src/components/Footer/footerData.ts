@@ -1,6 +1,7 @@
 export type FooterLink = {
   label: string;
   href: string;
+  noHover?: boolean;
 };
 
 export type FooterColumnData = {
@@ -31,9 +32,9 @@ export const footerData: FooterColumnData[] =  [
     {  
     title: "Localização",
     links: [
-        {label:"R. Edson Nunes de Paula, 70 - Nossa Sra. de Fátima", href:""},
-        {label:"Patos de Minas - MG", href:""},
-        {label:"Brasil", href:""},        
+        {label:"R. Edson Nunes de Paula, 70 - Nossa Sra. de Fátima", href:"", noHover: true},
+        {label:"Patos de Minas - MG", href:"", noHover: true},
+        {label:"Brasil", href:"", noHover: true},        
     ],
 },
 

@@ -39,19 +39,19 @@ export const Header: React.FC = () => {
             Home
           </S.Button>
 
-          <S.Button as={Link} to="/projetos" onClick={closeMenu}>
+          <S.Button as={Link} to="/projects" onClick={closeMenu}>
             Projetos
           </S.Button>
 
-          <S.Button as={Link} to="/servicos" onClick={closeMenu}>
+          <S.Button as={Link} to="/services" onClick={closeMenu}>
             Serviços
           </S.Button>
 
-          <S.Button as={Link} to="/quemsomos" onClick={closeMenu}>
+          <S.Button as={Link} to="/about-us" onClick={closeMenu}>
             Quem Somos
           </S.Button>
 
-          <S.OrçButton as={Link} to="/orcamento" onClick={closeMenu}>
+          <S.OrçButton as={Link} to="/budget" onClick={closeMenu}>
             Orçamento
           </S.OrçButton>
         </S.Menu>

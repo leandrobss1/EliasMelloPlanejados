@@ -24,10 +24,10 @@ root.render(
       <Routes>
         <Route path="/" element={<App />}>
           <Route index element={<Home />} />
-          <Route path="projetos" element={<Projetos />} />
-          <Route path="servicos" element={<Serviços />} />
-		      <Route path="orcamento" element={<Orcamento />} />
-          <Route path='quemsomos' element={<QuemSomos/>} />
+          <Route path="projects" element={<Projetos />} />
+          <Route path="services" element={<Serviços />} />
+		      <Route path="budget" element={<Orcamento />} />
+          <Route path='about-us' element={<QuemSomos/>} />
         </Route>
       </Routes>
     </BrowserRouter>

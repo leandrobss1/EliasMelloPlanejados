@@ -74,10 +74,11 @@ export const OrçButton = styled.button`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	border: 2px solid transparent;
+	border: 5px solid transparent;
+	border-radius: 0 10px 0 10px ;
 	height: 40px;
 	padding: 0 1rem;
-	color: white;
+	color: #ffff;
 	cursor: pointer;
 	font-size: 1rem;
 	font-weight: 400;

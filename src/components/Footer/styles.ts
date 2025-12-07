@@ -38,7 +38,7 @@ export const Label = styled.span`
   color: #ccc;
 `;
 
-export const Link = styled.a`
+export const Link = styled.a<{ noHover?: boolean }>`
   display: inline-block;
 
   color: #ccc;
@@ -46,11 +46,15 @@ export const Link = styled.a`
   font-size: 14px;
   transition: all 0.2s ease;
 
-  &:hover {
-    transform: translateY(-2px);
-    color: #ea8a01;
-    font-weight: bold;
-  }
+  ${({ noHover }) =>
+    !noHover &&
+    `
+      &:hover {
+        transform: translateY(-2px);
+        color: #ea8a01;
+        font-weight: bold;
+      }
+  `}
 `;
 
 
@@ -135,12 +139,17 @@ export const Copy = styled.p`
   }
 `;
 
-export const Text = styled.p`
+export const Text = styled.p<{ noHover?: boolean }>`
   color: #ccc;
   font-size: 14px;
   transition: all 0.2s ease;
 
-  &:hover {
-    transform: translateY(-2px);
-  }
+   ${({ noHover }) =>
+    !noHover &&
+    `
+      &:hover {
+        transform: translateY(-2px);
+      }
+  `}
+
 `;
