@@ -9,12 +9,26 @@ export const Orcamento: React.FC = () => {
     message: ""
   });
 
+  const formatPhone = (value: string) => {
+  value = value.replace(/\D/g, ""); 
+
+  if (value.length > 10) {
+    return value.replace(/(\d{2})(\d{5})(\d{4})/, "($1) $2-$3");
+  } else {
+    return value.replace(/(\d{2})(\d{4})(\d{4})/, "($1) $2-$3");
+  }
+};
+
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
+  const { name, value } = e.target;
+
+  setFormData({
+    ...formData,
+    [name]: name === "phone" ? formatPhone(value) : value
+  });
+};
+
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -50,47 +64,51 @@ export const Orcamento: React.FC = () => {
 
       <S.OrçForm onSubmit={handleSubmit}>
 
-        <div>
-          <label>Nome *</label>
-          <input
+        <S.OrçDiv>
+          <S.OrçLabel>Nome </S.OrçLabel>
+          <S.OrçInput
             type="text"
             name="name"
             required
             value={formData.name}
             onChange={handleChange}
+            placeholder="Seu nome completo"
           />
-        </div>
+        </S.OrçDiv>
 
-        <div>
-          <label>Email *</label>
-          <input
+        <S.OrçDiv>
+          <S.OrçLabel>Email </S.OrçLabel>
+          <S.OrçInput
             type="email"
             name="email"
             required
             value={formData.email}
             onChange={handleChange}
+            placeholder="Seu email"
           />
-        </div>
+        </S.OrçDiv>
 
-        <div>
-          <label>Telefone</label>
-          <input
+        <S.OrçDiv>
+          <S.OrçLabel>Telefone </S.OrçLabel>
+          <S.OrçInput
             type="text"
             name="phone"
             value={formData.phone}
             onChange={handleChange}
-          />
-        </div>
+            placeholder="EX: (99) 99999-9999"
+            />
+        </S.OrçDiv>
 
-        <div>
-          <label>Mensagem *</label>
-          <textarea
+        <S.OrçDiv>
+          <S.OrçLabel>Mensagem </S.OrçLabel>
+          <S.OrçTextarea
             name="message"
             required
             value={formData.message}
             onChange={handleChange}
+            placeholder="Escreva seu projeto dos sonhos.."
           />
-        </div>
+        </S.OrçDiv>
 
         <S.OrçButton type="submit">Enviar</S.OrçButton>
       </S.OrçForm>

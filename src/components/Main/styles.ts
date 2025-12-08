@@ -80,6 +80,7 @@ export const MainParagraph = styled.p`
 	padding: 2rem;
 	width: 65%;
 
+
 	@media (max-width: 768px) {
 		font-size: 1rem;
 		padding: 1.5rem;
@@ -87,7 +88,7 @@ export const MainParagraph = styled.p`
 	}
 
 	strong {
-		color: #ea8a01;
-		
+		color: #ea8a01;		
 	}
+
 `;

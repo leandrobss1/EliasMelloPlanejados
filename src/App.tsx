@@ -14,6 +14,7 @@ function App() {
       <Outlet />
       <Footer/>
 
+
       <ScrollToTop />
     </>
   );

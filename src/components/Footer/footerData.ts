@@ -24,8 +24,8 @@ export const footerData: FooterColumnData[] =  [
     {  
     title: "Empresa",
     links: [
-        {label:"Sobre Nós", href:"/quemsomos"},
-        {label:"Contato", href:"/orcamento"},        
+        {label:"Sobre Nós", href:"/about-us"},
+        {label:"Contato", href:"/budget"},        
     ],
 },
 

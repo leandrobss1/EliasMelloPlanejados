@@ -26,4 +26,10 @@ body {
 }
 `;
 
+export const GlobalFontStyles = createGlobalStyle`
 
+* {
+    font-family: "Source Code Pro", monospace
+}
+
+`
