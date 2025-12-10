@@ -104,6 +104,7 @@ export const Orcamento: React.FC = () => {
           <S.OrçTextarea
             name="message"
             required
+            maxLength={100}
             value={formData.message}
             onChange={handleChange}
             placeholder="Escreva seu projeto dos sonhos.."

@@ -6,14 +6,23 @@ export const OrçContainer = styled.div`
 	justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 50%;
+    width: 100%;
     
     animation: ${pageFade} 1.5s ease-in-out;
+
+    @media (max-width: 425px) {
+        width: 100%;
+    }
     
 
 `
 export const OrçTitle = styled.h1` 
     padding: 2rem 0 2rem 0;
+
+    @media (max-width: 425px) {
+        text-align: center;
+        width: 50%;
+    }
     
 `
 
@@ -27,6 +36,10 @@ export const OrçForm = styled.form`
     width: 100%;
     max-width: 400px;
     padding: 0 0 1rem;
+
+    @media (max-width: 425px) {
+        width: 50%;
+    }
 `
 export const OrçButton = styled.button`
     margin-top: 1rem;
@@ -52,11 +65,17 @@ export const OrçDiv = styled.div`
 
 `
 export const OrçInput = styled.input`
-    width: 100%;
-    height: 2.5rem;
-    padding: 0.5rem;
-    font-size: 1rem;
-    border-radius: 0.25rem;
+    resize: none;
+    outline: none;
+    border: 1px solid #ccc;
+    padding: 12px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+
+  &:focus {
+    border-color: #ea8a01;  
+    box-shadow: 0 0 0 2px rgba(218, 135, 10, 0.25); 
+  }
 `
 export const OrçLabel = styled.label`
     padding: 0.50rem 0;
@@ -67,10 +86,16 @@ export const OrçLabel = styled.label`
 `
 
 export const OrçTextarea = styled.textarea`
-    width: 100%;
-    height: 2.5rem;
-    padding: 0.5rem;
-    font-size: 1rem;
-    border-radius: 0.25rem;
+    resize: none;
+    outline: none;
+    border: 1px solid #ccc;
+    padding: 12px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+
+  &:focus {
+    border-color: #ea8a01;  
+    box-shadow: 0 0 0 2px rgba(218, 135, 10, 0.25); 
+  }
 `
 
