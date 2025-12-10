@@ -56,9 +56,20 @@ export const QSTitle = styled.div`
 		width: 80%;
 	}
 
-	@media (max-width: 750px) and (min-width: 50px) {
+	@media (max-width: 750px) and (min-width: 430px) {
 		font-size: 1.3rem;
 		width: 80%;
+	}
+
+	@media (max-width: 425px) {
+		font-size: 1.3rem;
+		width: 50%;
+	}
+
+	@media (max-width: 320px) {
+		text-align: center;
+		font-size: 1.1rem;
+		width: 90%;
 	}
 `
 
@@ -72,6 +83,16 @@ export const QSParagraph = styled.div`
 		font-size: 1rem;
 		padding: 1.5rem;
 		width: 90%;
+	}
+
+	@media (max-width: 425px) {
+		font-size: 0.9rem;
+		width: 100%;
+	}
+
+	@media (max-width: 320px) {
+		font-size: 0.9rem;
+		width: 100%;
 	}
 
 	strong {
@@ -88,6 +109,11 @@ export const QSSection = styled.div`
   display: flex;
   flex-direction: column;
   gap: 4rem;
+
+  @media (max-width: 320px) {
+		width: 100%;
+		padding: 2rem 0.5rem;
+	}
 
 `;
 
@@ -115,6 +141,10 @@ export const QSImage = styled.img`
 
   @media (max-width: 900px) {
     width: 50%
+  }
+
+  @media (max-width: 425px) {
+    width: 70%
   }
 `;
 

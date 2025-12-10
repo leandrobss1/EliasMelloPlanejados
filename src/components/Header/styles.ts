@@ -96,6 +96,7 @@ export const OrçButton = styled.button`
 
 	&:hover {
 		color: black;
+		font-weight: 500;
 		
 		transform: translateY(-4px);
 		box-shadow: none;

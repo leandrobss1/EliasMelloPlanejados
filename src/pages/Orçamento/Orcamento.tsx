@@ -93,6 +93,7 @@ export const Orcamento: React.FC = () => {
           <S.OrçInput
             type="text"
             name="phone"
+            required
             value={formData.phone}
             onChange={handleChange}
             placeholder="EX: (99) 99999-9999"
@@ -107,7 +108,7 @@ export const Orcamento: React.FC = () => {
             maxLength={100}
             value={formData.message}
             onChange={handleChange}
-            placeholder="Escreva seu projeto dos sonhos.."
+            placeholder="Conte-nos sobre o seu projeto dos sonhos..."
           />
         </S.OrçDiv>
 
