@@ -44,7 +44,7 @@ export const CardsTitle = styled.h1`
 	text-align: center;
 	margin-bottom: 1rem;
 	font-weight: 400;
-	color: black;
+	color: #020000;
 	font-family: 'Montserrat', serif;
 
 	strong {

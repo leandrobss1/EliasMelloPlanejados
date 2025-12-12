@@ -7,6 +7,8 @@ export const OrçContainer = styled.div`
     align-items: center;
     flex-direction: column;
     width: 100%;
+    padding: 1rem 0;
+    
     
     animation: ${pageFade} 1.5s ease-in-out;
 
@@ -35,26 +37,12 @@ export const OrçForm = styled.form`
     flex-direction: column;
     width: 100%;
     max-width: 400px;
-    padding: 0 0 1rem;
+    padding: 1rem;
+    border: 0.1rem solid #ccc;
+    border-radius: 0 10px 0 10px;
 
     @media (max-width: 425px) {
         width: 50%;
-    }
-`
-export const OrçButton = styled.button`
-    margin-top: 1rem;
-    padding: 0.8rem;
-    background-color: #fff;
-    color: #000;
-    border: 1px solid #000;
-    cursor: pointer;
-    font-weight: bold;
-    border-radius: 0.25rem;
-
-
-    &:hover {
-        background-color: #000;
-        color: #fff;
     }
 `
 
@@ -69,7 +57,7 @@ export const OrçInput = styled.input`
     outline: none;
     border: 1px solid #ccc;
     padding: 12px;
-    border-radius: 8px;
+    border-radius: 0 10px 0 10px;  
     transition: all 0.2s ease;
 
   &:focus {
@@ -90,7 +78,7 @@ export const OrçTextarea = styled.textarea`
     outline: none;
     border: 1px solid #ccc;
     padding: 12px;
-    border-radius: 8px;
+    border-radius: 0 10px 0 10px;
     transition: all 0.2s ease;
 
   &:focus {

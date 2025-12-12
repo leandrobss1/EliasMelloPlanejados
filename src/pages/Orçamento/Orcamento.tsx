@@ -1,5 +1,17 @@
 import React, { useState } from "react";
+import styled from 'styled-components';
 import * as S from "./styles";
+import * as HeaderStyles from "../../components/Header/styles";
+
+export const CustomButton = styled(HeaderStyles.OrçButton)`
+  font-family: "Source Code Pro", monospace;
+  font-weight: 700;
+
+  &:hover {
+    font-weight: 700;
+  }
+  `
+
 
 export const Orcamento: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -29,9 +41,12 @@ export const Orcamento: React.FC = () => {
   });
 };
 
+  const [isLoading, setIsLoading] = useState(false);
+
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsLoading(true);
 
     try {
       const response = await fetch("http://localhost:3333/api/send-email", {
@@ -55,6 +70,8 @@ export const Orcamento: React.FC = () => {
 
     } catch (error) {
       alert("Erro ao enviar. Tente novamente.");
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -84,7 +101,7 @@ export const Orcamento: React.FC = () => {
             required
             value={formData.email}
             onChange={handleChange}
-            placeholder="Seu email"
+            placeholder="Seu melhor email"
           />
         </S.OrçDiv>
 
@@ -112,7 +129,7 @@ export const Orcamento: React.FC = () => {
           />
         </S.OrçDiv>
 
-        <S.OrçButton type="submit">Enviar</S.OrçButton>
+        <CustomButton type="submit" disabled={isLoading}>{isLoading ? "Enviando..." : "Enviar"}</CustomButton>
       </S.OrçForm>
     </S.OrçContainer>
   );
