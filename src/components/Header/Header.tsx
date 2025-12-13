@@ -36,23 +36,23 @@ export const Header: React.FC = () => {
 
         <S.Menu isMenuOpen={isMenuOpen}>
           <S.Button as={Link} to="/" onClick={closeMenu}>
-            Home
+            HOME
           </S.Button>
 
           <S.Button as={Link} to="/projects" onClick={closeMenu}>
-            Projetos
+            PROJETOS
           </S.Button>
 
           <S.Button as={Link} to="/services" onClick={closeMenu}>
-            Serviços
+            NOSSOS SERVIÇOS
           </S.Button>
 
           <S.Button as={Link} to="/about-us" onClick={closeMenu}>
-            Quem Somos
+            SOBRE NÓS
           </S.Button>
 
           <S.OrçButton as={Link} to="/budget" onClick={closeMenu}>
-            Orçamento
+            ORÇAMENTO
           </S.OrçButton>
         </S.Menu>
       </S.Wrapper>

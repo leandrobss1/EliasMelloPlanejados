@@ -38,7 +38,7 @@ export const CarouselTitle = styled.h1`
 	padding: 1rem;
 	text-align: center;
 	font-family: 'Montserrat', serif;
-	font-weight: 300;
+	font-weight: 500;
 	color: white;
 
 	strong {

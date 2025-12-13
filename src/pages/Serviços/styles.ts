@@ -14,7 +14,8 @@ export const ServContainer = styled.div`
 `
 export const ServTitle = styled.h1` 
     padding: 2rem 0 2rem 0;
-    
+    font-weight: 500;
+
 `
 
 export const ServParagraph = styled.p`

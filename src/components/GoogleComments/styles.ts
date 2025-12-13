@@ -54,10 +54,13 @@ export const GoogleComments = styled.img`
 	flex: 0 0 calc(33% - 0.5rem);
 	padding: 0.8rem;
 	width: 100%;
+	transition: transform 0.3s;
+	border-radius: 4%;
 
 	&:hover {
+		transform: translateY(4px);
 		box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-		transition: 0.4s;
+		/* transition: 0.4s; */
 	}
 
 	@media (max-width: 930px) and (min-width: 750px) {

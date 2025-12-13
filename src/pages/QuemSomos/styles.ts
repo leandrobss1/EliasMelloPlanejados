@@ -47,6 +47,7 @@ export const QSPhoto = styled.img`
 
 export const QSTitle = styled.div`
 	font-size: 2rem;
+	font-weight: 500;
 	width: 100%;
 	text-align: center;
 	padding: 1rem 0 0 1rem;
@@ -78,6 +79,7 @@ export const QSParagraph = styled.div`
 	padding: 2rem;
 	width: 100%;
 	text-align: center;
+	color: #222221ff;
 
 	@media (max-width: 768px) {
 		font-size: 1rem;

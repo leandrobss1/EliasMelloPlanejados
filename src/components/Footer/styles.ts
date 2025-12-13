@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.footer`
   width: 100%;
   background-color: #0d0d0d;
-  padding: 4rem 2rem;
+  padding: 1rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 2rem;
@@ -26,7 +26,7 @@ export const Column = styled.div`
 export const Title = styled.h3`
   font-size: 1.2rem;
   font-weight: 600;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -65,7 +65,7 @@ export const LinkList = styled.ul`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: .5rem;
+  gap: 0.5rem;
 `;
 
 export const LinkItem = styled.li`

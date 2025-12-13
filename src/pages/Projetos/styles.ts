@@ -14,6 +14,7 @@ export const ProjectContainer = styled.div`
 `
 export const ProjectTitle = styled.h1` 
     padding: 2rem 0 2rem 0;
+    font-weight: 500;
     
 `
 

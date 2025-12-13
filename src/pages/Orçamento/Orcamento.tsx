@@ -2,15 +2,17 @@ import React, { useState } from "react";
 import styled from 'styled-components';
 import * as S from "./styles";
 import * as HeaderStyles from "../../components/Header/styles";
+import { MapLocation } from "../../components/MapLocation/MapLocation";
 
 export const CustomButton = styled(HeaderStyles.OrçButton)`
   font-family: "Source Code Pro", monospace;
-  font-weight: 700;
+  font-weight: 600;
+  margin-bottom: 0.50rem;
 
   &:hover {
     font-weight: 700;
   }
-  `
+`
 
 
 export const Orcamento: React.FC = () => {
@@ -43,9 +45,16 @@ export const Orcamento: React.FC = () => {
 
   const [isLoading, setIsLoading] = useState(false);
 
+  const [authorized, setAuthorized] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (!authorized) {
+    alert("Você precisa autorizar o uso dos dados para enviar a mensagem.");
+    return;
+  }
+
     setIsLoading(true);
 
     try {
@@ -77,7 +86,7 @@ export const Orcamento: React.FC = () => {
 
   return (
     <S.OrçContainer>
-      <S.OrçTitle>Faça seu orçamento</S.OrçTitle>
+      <S.OrçTitle>Envie sua mensagem</S.OrçTitle>
 
       <S.OrçForm onSubmit={handleSubmit}>
 
@@ -130,7 +139,21 @@ export const Orcamento: React.FC = () => {
         </S.OrçDiv>
 
         <CustomButton type="submit" disabled={isLoading}>{isLoading ? "Enviando..." : "Enviar"}</CustomButton>
+
+        <S.OrçWrapper/>
+         <S.OrçLabelVerify>
+             <S.OrçInputVerify
+                 type="checkbox"
+                  checked={authorized}
+                  onChange={(e) => setAuthorized(e.target.checked)}
+                  />
+                                   
+                  *Autorizo que os meus dados pessoais (nome, e-mail, telefone) sejam utilizados para finalidade de retorno ao contato solicitado. Após término do tratamento dos dados, os mesmos serão descartados, em conformidade com Lei 13.709/18, Lei Geral de Proteção de Dados.     
+          </S.OrçLabelVerify>
+        <S.OrçWrapper/>
       </S.OrçForm>
+      
+      <MapLocation/>
     </S.OrçContainer>
   );
 };

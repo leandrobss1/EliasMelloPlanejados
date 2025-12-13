@@ -20,6 +20,7 @@ export const OrçContainer = styled.div`
 `
 export const OrçTitle = styled.h1` 
     padding: 2rem 0 2rem 0;
+    font-weight: 500;
 
     @media (max-width: 425px) {
         text-align: center;
@@ -59,18 +60,45 @@ export const OrçInput = styled.input`
     padding: 12px;
     border-radius: 0 10px 0 10px;  
     transition: all 0.2s ease;
+    background-color: #f5f5f5ff;
 
   &:focus {
     border-color: #ea8a01;  
     box-shadow: 0 0 0 2px rgba(218, 135, 10, 0.25); 
   }
 `
+
+export const OrçWrapper = styled.div`
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    margin-top: 0.5rem;
+`;
+
+export const OrçInputVerify = styled.input`
+    margin-right: 0.45rem;
+    cursor: pointer;
+`
+
 export const OrçLabel = styled.label`
     padding: 0.50rem 0;
     
     font-family: "Source Code Pro", monospace;
     font-weight: 700;
     font-size: 1.10rem;
+`
+
+export const OrçLabelVerify = styled.label`
+    display: flex;
+    align-items: center;
+
+    font-family: "Source Code Pro", monospace;
+    font-weight: 500;
+    font-size: 0.90rem;
+    line-height: 1.4;
+    width: auto;
+    margin: 0;
+    cursor: pointer;
 `
 
 export const OrçTextarea = styled.textarea`
@@ -80,6 +108,8 @@ export const OrçTextarea = styled.textarea`
     padding: 12px;
     border-radius: 0 10px 0 10px;
     transition: all 0.2s ease;
+    background-color: #f5f5f5ff;
+
 
   &:focus {
     border-color: #ea8a01;  
