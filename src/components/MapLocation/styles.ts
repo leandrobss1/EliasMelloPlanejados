@@ -2,10 +2,9 @@ import styled from 'styled-components';
 
 export const MapContainer = styled.div`
     width: 100%;
-    height: 18.75rem;
+    height: 30rem;
     margin-top: 1rem;
     margin-bottom: -1rem;
-    border-radius: 8px;
     overflow: hidden;
 
     iframe {
@@ -13,4 +12,6 @@ export const MapContainer = styled.div`
         height: 100%;
         border: none;
     }
+
+    filter: grayscale(100%);
 `;

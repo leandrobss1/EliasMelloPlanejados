@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import { pageFade } from "../../styles/GlobalStyles";
+import bgPlant from '../../assets/img/bg-plant.png';
+
 
 export const OrçContainer = styled.div`
     display: flex;
@@ -14,13 +16,63 @@ export const OrçContainer = styled.div`
 
     @media (max-width: 425px) {
         width: 100%;
-    }
-    
+    }   
 
 `
+export const OrçContain = styled.div`
+  position: relative;
+  z-index: 8;
+
+  background-image: url(${bgPlant});
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: #ffff;
+
+  width: 88%;
+  height: 100%;
+  border: 1px solid #b3b0acff;
+
+  @media (max-width: 768px) {
+    margin-bottom: 0; 
+  }
+`;
+
+
+export const OrçGrid = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1100px;
+  height: 47.38rem;
+  align-items: start;
+  margin-bottom: -2.5rem;
+;
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+`;
+
+
 export const OrçTitle = styled.h1` 
     padding: 2rem 0 2rem 0;
-    font-weight: 500;
+    font-weight: 600;
+
+    @media (max-width: 425px) {
+        text-align: center;
+        width: 50%;
+    }
+    
+`
+
+export const OrçTitleForm = styled.h2` 
+    font-family: "Source Code Pro", monospace;
+    font-weight: 700;
+    font-size: 1.9rem;
+    padding: 2rem 0 2rem 0;
+
 
     @media (max-width: 425px) {
         text-align: center;
@@ -39,11 +91,10 @@ export const OrçForm = styled.form`
     width: 100%;
     max-width: 400px;
     padding: 1rem;
-    border: 0.1rem solid #ccc;
-    border-radius: 0 10px 0 10px;
+;
 
     @media (max-width: 425px) {
-        width: 50%;
+        width: 100%;
     }
 `
 
@@ -58,7 +109,7 @@ export const OrçInput = styled.input`
     outline: none;
     border: 1px solid #ccc;
     padding: 12px;
-    border-radius: 0 10px 0 10px;  
+;  
     transition: all 0.2s ease;
     background-color: #f5f5f5ff;
 
@@ -76,7 +127,7 @@ export const OrçWrapper = styled.div`
 `;
 
 export const OrçInputVerify = styled.input`
-    margin-right: 0.45rem;
+    margin-right: 0.20rem;
     cursor: pointer;
 `
 
@@ -106,7 +157,7 @@ export const OrçTextarea = styled.textarea`
     outline: none;
     border: 1px solid #ccc;
     padding: 12px;
-    border-radius: 0 10px 0 10px;
+;
     transition: all 0.2s ease;
     background-color: #f5f5f5ff;
 

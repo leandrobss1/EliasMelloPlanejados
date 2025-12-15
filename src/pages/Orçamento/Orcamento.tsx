@@ -14,7 +14,6 @@ export const CustomButton = styled(HeaderStyles.OrçButton)`
   }
 `
 
-
 export const Orcamento: React.FC = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -86,10 +85,13 @@ export const Orcamento: React.FC = () => {
 
   return (
     <S.OrçContainer>
-      <S.OrçTitle>Envie sua mensagem</S.OrçTitle>
+      
+      <S.OrçTitle>Nossos contatos</S.OrçTitle>
+
+      <S.OrçGrid>
 
       <S.OrçForm onSubmit={handleSubmit}>
-
+        <S.OrçTitleForm>Envie sua mensagem</S.OrçTitleForm>
         <S.OrçDiv>
           <S.OrçLabel>Nome </S.OrçLabel>
           <S.OrçInput
@@ -146,13 +148,16 @@ export const Orcamento: React.FC = () => {
                  type="checkbox"
                   checked={authorized}
                   onChange={(e) => setAuthorized(e.target.checked)}
-                  />
-                                   
-                  *Autorizo que os meus dados pessoais (nome, e-mail, telefone) sejam utilizados para finalidade de retorno ao contato solicitado. Após término do tratamento dos dados, os mesmos serão descartados, em conformidade com Lei 13.709/18, Lei Geral de Proteção de Dados.     
+                  />                 
+                  *Autorizo que os meus dados pessoais (nome, e-mail, telefone) sejam utilizados para finalidade de retorno ao contato solicitado.     
           </S.OrçLabelVerify>
         <S.OrçWrapper/>
       </S.OrçForm>
-      
+      <S.OrçContain>aaa</S.OrçContain>
+
+     </S.OrçGrid>
+
+
       <MapLocation/>
     </S.OrçContainer>
   );
