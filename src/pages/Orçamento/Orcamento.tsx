@@ -3,14 +3,24 @@ import styled from 'styled-components';
 import * as S from "./styles";
 import * as HeaderStyles from "../../components/Header/styles";
 import { MapLocation } from "../../components/MapLocation/MapLocation";
+import { GrLocation } from "react-icons/gr";
+import { LuPhone } from "react-icons/lu";
+import { SlEnvolopeLetter } from "react-icons/sl";
+
 
 export const CustomButton = styled(HeaderStyles.OrçButton)`
   font-family: "Source Code Pro", monospace;
   font-weight: 600;
   margin-bottom: 0.50rem;
+  border-radius: 0;
+  background-color: #ffff;
+  color: #000000;
+  border: 1px solid #000000;
 
   &:hover {
     font-weight: 700;
+    border-bottom: 4px solid #000000;
+		border-right: 4px solid #000000; 
   }
 `
 
@@ -91,7 +101,7 @@ export const Orcamento: React.FC = () => {
       <S.OrçGrid>
 
       <S.OrçForm onSubmit={handleSubmit}>
-        <S.OrçTitleForm>Envie sua mensagem</S.OrçTitleForm>
+        <S.OrçTitleContain>Envie sua mensagem</S.OrçTitleContain>
         <S.OrçDiv>
           <S.OrçLabel>Nome </S.OrçLabel>
           <S.OrçInput
@@ -153,10 +163,18 @@ export const Orcamento: React.FC = () => {
           </S.OrçLabelVerify>
         <S.OrçWrapper/>
       </S.OrçForm>
-      <S.OrçContain>aaa</S.OrçContain>
+      
+      <S.OrçContain>
+
+      <S.OrçWrapperRight>
+
+      <S.OrçTitleContain>Fale conosco</S.OrçTitleContain>
+
+      </S.OrçWrapperRight>
+
+      </S.OrçContain>     
 
      </S.OrçGrid>
-
 
       <MapLocation/>
     </S.OrçContainer>

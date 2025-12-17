@@ -39,6 +39,22 @@ export const OrçContain = styled.div`
   }
 `;
 
+export const OrçWrapperRight = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2rem;
+`
+
+export const OrçContainForm = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+    padding: 8rem 0;
+`
 
 export const OrçGrid = styled.div`
   display: grid;
@@ -58,7 +74,7 @@ export const OrçGrid = styled.div`
 
 export const OrçTitle = styled.h1` 
     padding: 2rem 0 2rem 0;
-    font-weight: 600;
+    font-weight: 500;
 
     @media (max-width: 425px) {
         text-align: center;
@@ -67,11 +83,11 @@ export const OrçTitle = styled.h1`
     
 `
 
-export const OrçTitleForm = styled.h2` 
+export const OrçTitleContain = styled.h2` 
     font-family: "Source Code Pro", monospace;
     font-weight: 700;
-    font-size: 1.9rem;
-    padding: 2rem 0 2rem 0;
+    font-size: 2.3rem;
+    padding: 1rem 0 1rem 0;
 
 
     @media (max-width: 425px) {
@@ -79,10 +95,24 @@ export const OrçTitleForm = styled.h2`
         width: 50%;
     }
     
+`
+export const OrçTitleForm = styled.h3`
+    font-size: 0.8rem;
+    color: #e4e4e4ff;
+    margin-left: -7.2rem;
+
+`
+
+export const OrçContainSvg = styled.div`
+    width: 100%;
 `
 
 export const OrçParagraph = styled.p`
-    font-size: 1.4rem;
+    font-size: 0.9rem;
+    color: #e4e4e4ff;
+    width: 323px;
+
+    padding-top: 40px;
 `
 
 export const OrçForm = styled.form`
@@ -133,16 +163,16 @@ export const OrçInputVerify = styled.input`
 
 export const OrçLabel = styled.label`
     padding: 0.50rem 0;
-    
+    color: #5f5959ff;
     font-family: "Source Code Pro", monospace;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 1.10rem;
 `
 
 export const OrçLabelVerify = styled.label`
     display: flex;
     align-items: center;
-
+    color: #5f5959ff;
     font-family: "Source Code Pro", monospace;
     font-weight: 500;
     font-size: 0.90rem;
@@ -159,7 +189,7 @@ export const OrçTextarea = styled.textarea`
     padding: 12px;
 ;
     transition: all 0.2s ease;
-    background-color: #f5f5f5ff;
+    background-color: #f8f6f6ff;
 
 
   &:focus {
