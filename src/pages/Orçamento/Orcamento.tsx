@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import styled from 'styled-components';
-import * as S from "./styles";
+import * as S from "./ContactItemStyle";
 import * as HeaderStyles from "../../components/Header/styles";
 import { MapLocation } from "../../components/MapLocation/MapLocation";
 import { GrLocation } from "react-icons/gr";
 import { LuPhone } from "react-icons/lu";
 import { SlEnvolopeLetter } from "react-icons/sl";
+import { ContactItem } from "./ContactItem";
+import { contactItems } from "./contactItems";
 
 
 export const CustomButton = styled(HeaderStyles.OrçButton)`
@@ -22,6 +24,9 @@ export const CustomButton = styled(HeaderStyles.OrçButton)`
     border-bottom: 4px solid #000000;
 		border-right: 4px solid #000000; 
   }
+`
+export const CustomTitle = styled(S.OrçTitleContain)`
+  padding-bottom: 2rem;
 `
 
 export const Orcamento: React.FC = () => {
@@ -165,14 +170,24 @@ export const Orcamento: React.FC = () => {
       </S.OrçForm>
       
       <S.OrçContain>
+        <S.OrçWrapperRight>
 
-      <S.OrçWrapperRight>
+          <S.OrçSpanContain>[ Outros meios de contato]</S.OrçSpanContain>
 
-      <S.OrçTitleContain>Fale conosco</S.OrçTitleContain>
-
+          <CustomTitle>Fale com a gente</CustomTitle>
+          
+          <S.OrçParagraphContain>Você também pode falar com nossa equipe através dos contatos abaixo</S.OrçParagraphContain>
+      {contactItems.map((item, index) => (
+       <ContactItem
+         key={index}
+          icon={item.icon}
+          title={item.title}
+          value={item.value}
+  />
+))}
       </S.OrçWrapperRight>
-
-      </S.OrçContain>     
+      </S.OrçContain>
+    
 
      </S.OrçGrid>
 

@@ -19,43 +19,6 @@ export const OrçContainer = styled.div`
     }   
 
 `
-export const OrçContain = styled.div`
-  position: relative;
-  z-index: 8;
-
-  background-image: url(${bgPlant});
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  color: #ffff;
-
-  width: 88%;
-  height: 100%;
-  border: 1px solid #b3b0acff;
-
-  @media (max-width: 768px) {
-    margin-bottom: 0; 
-  }
-`;
-
-export const OrçWrapperRight = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 2rem;
-`
-
-export const OrçContainForm = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    
-    padding: 8rem 0;
-`
-
 export const OrçGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -70,8 +33,6 @@ export const OrçGrid = styled.div`
     grid-template-columns: 1fr;
   }
 `;
-
-
 export const OrçTitle = styled.h1` 
     padding: 2rem 0 2rem 0;
     font-weight: 500;
@@ -82,11 +43,10 @@ export const OrçTitle = styled.h1`
     }
     
 `
-
 export const OrçTitleContain = styled.h2` 
     font-family: "Source Code Pro", monospace;
     font-weight: 700;
-    font-size: 2.3rem;
+    font-size: 2.7rem;
     padding: 1rem 0 1rem 0;
 
 
@@ -96,25 +56,6 @@ export const OrçTitleContain = styled.h2`
     }
     
 `
-export const OrçTitleForm = styled.h3`
-    font-size: 0.8rem;
-    color: #e4e4e4ff;
-    margin-left: -7.2rem;
-
-`
-
-export const OrçContainSvg = styled.div`
-    width: 100%;
-`
-
-export const OrçParagraph = styled.p`
-    font-size: 0.9rem;
-    color: #e4e4e4ff;
-    width: 323px;
-
-    padding-top: 40px;
-`
-
 export const OrçForm = styled.form`
     display: flex;
     flex-direction: column;
@@ -127,7 +68,6 @@ export const OrçForm = styled.form`
         width: 100%;
     }
 `
-
 export const OrçDiv = styled.div`
     display: flex;
     flex-direction: column;
@@ -148,19 +88,16 @@ export const OrçInput = styled.input`
     box-shadow: 0 0 0 2px rgba(218, 135, 10, 0.25); 
   }
 `
-
 export const OrçWrapper = styled.div`
     display: flex;
     align-items: flex-start;
     gap: 0.6rem;
     margin-top: 0.5rem;
 `;
-
 export const OrçInputVerify = styled.input`
     margin-right: 0.20rem;
     cursor: pointer;
 `
-
 export const OrçLabel = styled.label`
     padding: 0.50rem 0;
     color: #5f5959ff;
@@ -168,7 +105,6 @@ export const OrçLabel = styled.label`
     font-weight: 500;
     font-size: 1.10rem;
 `
-
 export const OrçLabelVerify = styled.label`
     display: flex;
     align-items: center;
@@ -181,7 +117,6 @@ export const OrçLabelVerify = styled.label`
     margin: 0;
     cursor: pointer;
 `
-
 export const OrçTextarea = styled.textarea`
     resize: none;
     outline: none;
@@ -197,4 +132,65 @@ export const OrçTextarea = styled.textarea`
     box-shadow: 0 0 0 2px rgba(218, 135, 10, 0.25); 
   }
 `
+export const ContactItem = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 
+  width: 100%;
+  max-width: 420px;
+  padding: 1.2rem 0;
+`;
+export const ContactHeader = styled.h6`
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  font-size: 1rem;
+  color: #e4e4e4ff;
+
+  svg {
+    font-size: 1.2rem;
+    flex-shrink: 0;
+  }
+`;
+export const ContactValue = styled.p`
+  font-size: 0.9rem;
+  color: #e4e4e4ff;
+  width: 100%;
+  padding-left: 1.8rem;
+  padding-top: 0.3rem;
+`;
+export const OrçContain = styled.div`
+  position: relative;
+  z-index: 8;
+
+  background-image: url(${bgPlant});
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: #fff;
+  width: 90%;
+  height: 100%;
+  border: 1px solid #b3b0acff;
+`;
+export const OrçWrapperRight = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 12rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+`;
+
+export const OrçSpanContain = styled.span`
+  font-size: 0.9rem;
+  color: #e4e4e4ff;
+  text-align: left;
+`;
+export const OrçParagraphContain = styled.p`
+    font-size: 0.9rem;
+    color: #e4e4e4ff;
+    width: 100%;
+`;
