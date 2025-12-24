@@ -8,7 +8,7 @@ export const StyledHeader = styled.header`
 `;
 
 export const StyledIcon = styled.img`
-	width: 7.5rem;
+	width: 6.0rem;
 	height: auto;
 
 	@media (max-width: 768px) {

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from 'styled-components';
-import * as S from "./ContactItemStyle";
+import * as S from "./styles";
 import * as HeaderStyles from "../../components/Header/styles";
 import { MapLocation } from "../../components/MapLocation/MapLocation";
 import { GrLocation } from "react-icons/gr";
@@ -8,6 +8,8 @@ import { LuPhone } from "react-icons/lu";
 import { SlEnvolopeLetter } from "react-icons/sl";
 import { ContactItem } from "./ContactItem";
 import { contactItems } from "./contactItems";
+import { contactSocial } from "./contactSocial";
+import ContactSocials from "./ContactSocials";
 
 
 export const CustomButton = styled(HeaderStyles.OrçButton)`
@@ -185,6 +187,16 @@ export const Orcamento: React.FC = () => {
           value={item.value}
   />
 ))}
+    <ContactSocials>
+       {contactSocial.map((item, index) => (
+      <S.ContactHeaderSocial key={index}>
+        <a href={item.href} target="_blank" rel="noopener noreferrer" arial-label="Redes Sociais">
+        {item.svg}
+        </a>
+      </S.ContactHeaderSocial>
+  ))}
+    </ContactSocials>
+ 
       </S.OrçWrapperRight>
       </S.OrçContain>
     

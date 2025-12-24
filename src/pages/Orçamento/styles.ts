@@ -194,3 +194,36 @@ export const OrçParagraphContain = styled.p`
     color: #e4e4e4ff;
     width: 100%;
 `;
+
+export const ContactSocials = styled.div`
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 2rem 0;  
+ `
+
+export const ContactHeaderSocial = styled.div`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  margin: 0 auto;
+  padding: 0;
+  height: 45px;
+  width: 45px;
+  
+  a:visited {
+    color: #ffff;
+  }
+
+  a:hover {
+    color: #f3a837ff;
+  }
+
+  svg {
+    height: 28px;
+    width: 28px;
+  }
+`
+
+

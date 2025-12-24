@@ -1,5 +1,5 @@
 import React from 'react';
-import * as S from './ContactItemStyle';
+import * as S from './styles';
 
 interface ContactItemProps {
   icon: React.ReactNode;
