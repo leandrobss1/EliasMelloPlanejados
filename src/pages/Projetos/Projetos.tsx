@@ -18,6 +18,7 @@ export const Projetos: React.FC = () => {
       <S.ProjectsGrid>
       {projects.map((project) => (
         <ProjectCard
+          id={project.id}
           key={project.id}
           image={project.coverImage}
           title={project.title}

@@ -13,6 +13,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import { ProjetoGaleria } from './pages/Projetos/ProjetoGaleria';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -25,6 +26,7 @@ root.render(
         <Route path="/" element={<App />}>
           <Route index element={<Home />} />
           <Route path="projects" element={<Projetos />} />
+          <Route path="projects/:id" element={<ProjetoGaleria />} />
           <Route path="services" element={<Serviços />} />
 		      <Route path="budget" element={<Orcamento />} />
           <Route path='about-us' element={<QuemSomos/>} />
