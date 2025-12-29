@@ -1,10 +1,31 @@
-import React from 'react'
-import * as S from './styles'
+import React from "react";
+import * as S from "./styles";
 
-export const ProjetoCard: React.FC = () => {
-    return (
-        <></>
-    )
-}
+type ProjectCardProps = {
+  image: string;
+  title: string;
+  location: string;
+  onClick?: () => void;
+};
 
-export default ProjetoCard;
+export const ProjectCard: React.FC<ProjectCardProps> = ({
+  image,
+  title,
+  location,
+  onClick,
+}) => {
+  return (
+    <S.CardContainer onClick={onClick}>
+      <S.CardImage src={image} alt={title} />
+
+      <S.CardOverlay>
+        <S.CardInfo>
+          <S.CardTitleInfo>{title}</S.CardTitleInfo>
+          <S.CardSpan>{location}</S.CardSpan>
+        </S.CardInfo>
+      </S.CardOverlay>
+    </S.CardContainer>
+  );
+};
+
+export default ProjectCard;
