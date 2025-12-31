@@ -30,3 +30,4 @@ export const Projetos: React.FC = () => {
   );
 };
 
+export default Projetos;

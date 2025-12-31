@@ -188,3 +188,4 @@ export const LightboxClose = styled.button`
     color: #FF3838;
   }
 `;
+

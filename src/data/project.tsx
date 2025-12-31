@@ -49,6 +49,31 @@ export const projects = [
       "/images/projects/sara-geisyane/img3-cliente4.jpg",
       "/images/projects/sara-geisyane/img4-cliente4.jpg",
     ],
-  }
+  },
 
+  {
+    id: "rejane-patos",
+    title: "Rejane",
+    location: "Patos de Minas - MG",
+    coverImage: "images/projects/rejane-patos/cover.jpg",
+    images: [
+      "/images/projects/rejane-patos/img1-cliente5.jpg",
+      "/images/projects/rejane-patos/img2-cliente5.jpg",      
+      "/images/projects/rejane-patos/img3-cliente5.jpg",
+      "/images/projects/rejane-patos/img4-cliente5.jpg",
+    ],
+  },
+
+  {
+    id: "antonio-carlos",
+    title: "Antonio Carlos",
+    location: "Patos de Minas - MG",
+    coverImage: "images/projects/antonio-carlos/cover.jpg",
+    images: [
+      "/images/projects/antonio-carlos/img1-cliente6.jpg",
+      "/images/projects/antonio-carlos/img2-cliente6.jpg",      
+      "/images/projects/antonio-carlos/img3-cliente6.jpg",
+      "/images/projects/antonio-carlos/img4-cliente6.jpg",
+    ],
+  }
 ];
