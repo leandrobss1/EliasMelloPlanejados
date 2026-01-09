@@ -18,6 +18,7 @@ export const ServTitle = styled.h1`
 
 `
 
-export const ServParagraph = styled.p`
+export const ServParagraph = styled.h2`
     font-size: 1.4rem;
+    font-weight: 200;
 `

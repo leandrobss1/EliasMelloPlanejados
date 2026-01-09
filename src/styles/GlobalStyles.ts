@@ -12,7 +12,6 @@ export const GlobalStyles = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     font-family: Poppins, sans-serif;
-
 }
 
 html {
@@ -24,7 +23,12 @@ body {
     min-height: 100%; 
     overflow-x: hidden; 
 }
-`;
+
+img {
+    -webkit-user-drag: none;
+}
+`
+;
 
 export const GlobalFontStyles = createGlobalStyle`
 

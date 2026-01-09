@@ -15,11 +15,26 @@ export const ProjectContainer = styled.div`
 export const ProjectTitle = styled.h1` 
     padding: 2rem 0 2rem 0;
     font-weight: 500;
+
+    @media (max-width: 425px) and (min-width: 375px) {
+      font-size: 1.4rem;      
+    }
     
 `
 
-export const ProjectParagraph = styled.p`
+export const ProjectParagraph = styled.h2`
     font-size: 1.4rem;
+    font-weight: 200;
+
+    @media (max-width: 768px) and (min-width: 425px) {
+		font-size: 1.3rem;
+    text-align: center;
+		width: 80%;
+	}
+
+    @media (max-width: 425px) and (min-width: 375px) {
+      font-size: 1rem;      
+    }
 `
 
 export const CardContainer = styled.div`

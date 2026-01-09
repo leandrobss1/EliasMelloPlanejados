@@ -22,6 +22,7 @@ export const CardContainer = styled.div`
 	height: auto;
 	padding-top: 1rem;
 	background-color: white;
+	
 `;
 
 export const CardsWrapper = styled.div`
@@ -38,6 +39,7 @@ export const CardsWrapper = styled.div`
 		flex-direction: column;
 		align-items: center;
 	}
+	
 `;
 
 export const CardsTitle = styled.h1`
@@ -144,4 +146,5 @@ export const CardParagraph = styled.p`
 		padding-top: 1.6rem;
 		width: 100%;
 	}
+	
 `;

@@ -62,6 +62,7 @@ export const TextOverlay = styled.div`
 
 export const MainTitle = styled.h1`
 	font-size: 2rem;
+	font-weight: 500;
 	width: 50%;
 
 	@media (max-width: 930px) and (min-width: 768px) {
@@ -77,6 +78,7 @@ export const MainTitle = styled.h1`
 
 export const MainParagraph = styled.p`
 	font-size: 1.3rem;
+	font-weight: 200;
 	padding: 2rem;
 	width: 65%;
 
