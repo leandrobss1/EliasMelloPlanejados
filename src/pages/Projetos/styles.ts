@@ -178,15 +178,21 @@ export const LightboxContent = styled.div`
   position: relative;
   max-width: 90vw;
   max-height: 90vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
+
 export const LightboxImage = styled.img`
-  width: 100%;
-  height: auto;
+  max-width: 90vw;
   max-height: 90vh;
   object-fit: contain;
   display: block;
+  z-index: 1;
 `;
+
 
 export const LightboxClose = styled.button`
   position: absolute;
@@ -204,3 +210,49 @@ export const LightboxClose = styled.button`
   }
 `;
 
+export const PassImageLeft = styled.button`
+  position: absolute;
+  left: -56px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+
+  font-size: 32px;
+
+  background: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+
+  opacity: 0.7;
+
+&:hover {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.1);
+}
+
+`;
+
+
+export const PassImageRight = styled.button`
+  position: absolute;
+  right: -56px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+
+  font-size: 32px;
+
+  background: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+
+  opacity: 0.7;
+
+&:hover {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.1);
+}
+
+`;

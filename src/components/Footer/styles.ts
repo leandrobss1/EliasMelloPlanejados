@@ -16,7 +16,7 @@ export const Column = styled.div`
   flex-direction: column;
   gap: 1rem;
 
-  @media (max-width: 768px) {
+  @media (max-width: 768px) and (min-width: 425px) {
     width: auto;
     align-items: center;
     text-align: center; 
@@ -36,6 +36,7 @@ export const Title = styled.h3`
 export const Label = styled.span`
   font-size: 0.9rem;
   color: #ccc;
+  
 `;
 
 export const Link = styled.a<{ noHover?: boolean }>`
@@ -70,7 +71,7 @@ export const LinkList = styled.ul`
 
 export const LinkItem = styled.li`
   margin: 0;
-  padding: 0;
+  padding: 0;  
 `;
 
 export const BottomContainer = styled.div`
