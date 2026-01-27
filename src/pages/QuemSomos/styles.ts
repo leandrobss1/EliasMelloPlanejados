@@ -165,3 +165,20 @@ export const QText = styled.div`
 
 `;
 
+export const QPodCastWrapper = styled.div`
+	display: flex;
+	width: 100%;
+	margin: 0px;
+	background-color: #cecece;
+	padding: 0px;
+	border: 3px solid black;
+  	box-shadow: 1px;
+	
+	gap: 4px;
+
+`
+export const QPodCastInfo = styled.div`
+	background-color: #EAEFEF;
+	padding-bottom: 1rem;
+
+`
