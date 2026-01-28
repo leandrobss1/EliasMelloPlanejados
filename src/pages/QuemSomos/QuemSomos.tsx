@@ -2,6 +2,7 @@ import React from 'react'
 import * as S from './styles';
 import phImg1 from '../../assets/img/elias-melo-1.jpg';
 import phImg2 from '../../assets/img/elias-melo-2.jpg';
+import PodcastIcon from '../../assets/img/podcast-img.png'
 
 type Photo = {
     id: number,
@@ -57,17 +58,13 @@ export const QuemSomos: React.FC = () => {
 
                 <S.QPodCastWrapper>
 
-                    <S.QPodCastInfo>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic.</S.QPodCastInfo>
+                <S.QPodCastImg src={PodcastIcon} alt='podcast-image'/>
 
+                <S.QPodCastWrapperInfos>
+                    <S.QPodCastInfo1>Estamos afinando os microfones… em breve no ar!</S.QPodCastInfo1>
 
-                <hr/>
-
-                    <S.QPodCastInfo>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic.</S.QPodCastInfo>
-
-                <hr/>
-
-                    <S.QPodCastInfo>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic.</S.QPodCastInfo>    
-
+                    <S.QPodCastInfo2>Spoiler: vem podcast por aí 👀🎧</S.QPodCastInfo2>
+                </S.QPodCastWrapperInfos>
 
                 </S.QPodCastWrapper>
 

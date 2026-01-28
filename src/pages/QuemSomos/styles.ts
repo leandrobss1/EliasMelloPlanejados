@@ -169,16 +169,31 @@ export const QPodCastWrapper = styled.div`
 	display: flex;
 	width: 100%;
 	margin: 0px;
-	background-color: #cecece;
 	padding: 0px;
-	border: 3px solid black;
   	box-shadow: 1px;
-	
-	gap: 4px;
+`
+export const QPodCastInfo1 = styled.h1`
+	width: 100%;
+	font-weight: 600;
+	font-size: 2.3rem;
+`
+
+export const QPodCastInfo2 = styled.h3`
+	width: 100%;
+	font-size: 1.7rem;
+	font-weight: 400;
 
 `
-export const QPodCastInfo = styled.div`
-	background-color: #EAEFEF;
-	padding-bottom: 1rem;
+export const QPodCastImg = styled.img`
+	width: auto;
+	height: 400px;
+`
 
+export const QPodCastWrapperInfos = styled.div`
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding-left: 2rem;
 `
