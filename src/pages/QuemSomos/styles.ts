@@ -176,17 +176,17 @@ export const QPodCastInfo1 = styled.h1`
 	width: 100%;
 	font-weight: 600;
 	font-size: 2.3rem;
+	padding-bottom: 1rem;
 `
 
 export const QPodCastInfo2 = styled.h3`
 	width: 100%;
 	font-size: 1.7rem;
 	font-weight: 400;
-
 `
 export const QPodCastImg = styled.img`
 	width: auto;
-	height: 400px;
+	height: 37rem;
 `
 
 export const QPodCastWrapperInfos = styled.div`
@@ -197,3 +197,5 @@ export const QPodCastWrapperInfos = styled.div`
 	text-align: center;
 	padding-left: 2rem;
 `
+
+

@@ -23,22 +23,22 @@ export const Google: React.FC = () => {
 				/>
 				<S.GoogleComments
 					src={Commets3}
-					alt='first-commit'
+					alt='third-commit'
 					title='google-comment'
 				/>
 				<S.GoogleComments
 					src={Commets4}
-					alt='first-commit'
+					alt='fourth-commit'
 					title='google-comment'
 				/>
 				<S.GoogleComments
 					src={Commets5}
-					alt='first-commit'
+					alt='fifth-commit'
 					title='google-comment'
 				/>
 				<S.GoogleComments
 					src={Commets6}
-					alt='first-commit'
+					alt='sixth-commit'
 					title='google-comment'
 				/>
 			</S.GoogleWrapperContainer>

@@ -56,6 +56,8 @@ export const QuemSomos: React.FC = () => {
                     />
                 </S.QSRow>
 
+            <hr/>
+
                 <S.QPodCastWrapper>
 
                 <S.QPodCastImg src={PodcastIcon} alt='podcast-image'/>
