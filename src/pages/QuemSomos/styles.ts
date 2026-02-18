@@ -183,9 +183,11 @@ export const QPodCastInfo2 = styled.h3`
 	width: 100%;
 	font-size: 1.7rem;
 	font-weight: 400;
+	padding-bottom: 2rem;
+
 `
 export const QPodCastImg = styled.img`
-	width: auto;
+	width: 55rem;
 	height: 37rem;
 `
 
@@ -197,5 +199,20 @@ export const QPodCastWrapperInfos = styled.div`
 	text-align: center;
 	padding-left: 2rem;
 `
+export const QPodCastLink = styled.a`
+	font-size: 1.5rem; 
+	font-weight: 500;
+	color: #ea8a01;
+	text-decoration: none;
+	cursor: pointer;
 
+  	&:visited {
+		color: #ea8a01;
+	}
 
+	&:hover {
+		transform: translateY(-2px);
+		color: #ea6a02;
+	}
+	
+`

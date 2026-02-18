@@ -43,6 +43,7 @@ export const CardsWrapper = styled.div`
 `;
 
 export const CardsTitle = styled.h1`
+	font-size: 2rem;
 	text-align: center;
 	margin-bottom: 1rem;
 	font-weight: 500;

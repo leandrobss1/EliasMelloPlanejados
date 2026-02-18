@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { projects } from '../../data/project';
-import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
+import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import * as S from './styles';
 
 export const ProjetoGaleria: React.FC = () => {
@@ -58,11 +58,11 @@ export const ProjetoGaleria: React.FC = () => {
             </S.LightboxClose>
 
             <S.PassImageLeft onClick={handlePrev}>
-              <FaArrowCircleLeft />
+              <IoIosArrowBack/>
             </S.PassImageLeft>
 
             <S.PassImageRight onClick={handleNext}>
-              <FaArrowCircleRight />
+              <IoIosArrowForward />
             </S.PassImageRight>
 
             <S.LightboxImage

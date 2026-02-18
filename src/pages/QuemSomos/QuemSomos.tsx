@@ -13,8 +13,7 @@ type Photo = {
 const imagesElias: Photo[] = [
     
     { id: 1, src: phImg1, alt: 'First Image' },
-    { id: 2, src: phImg2, alt: 'Second Image'}
-   
+    { id: 2, src: phImg2, alt: 'Second Image'}   
 ]
 
 
@@ -66,6 +65,9 @@ export const QuemSomos: React.FC = () => {
                     <S.QPodCastInfo1>Estamos afinando os microfones… em breve no ar!</S.QPodCastInfo1>
 
                     <S.QPodCastInfo2>Spoiler: vem podcast por aí 👀🎧</S.QPodCastInfo2>
+
+                    <S.QPodCastLink href="https://www.instagram.com/conversanamedidapodcast/" target="_blank">@conversanamedidapodcast</S.QPodCastLink>
+
                 </S.QPodCastWrapperInfos>
 
                 </S.QPodCastWrapper>

@@ -5,7 +5,7 @@ import bgPlant from '../../assets/img/bg-plant.png';
 
 export const OrçContainer = styled.div`
     display: flex;
-	justify-content: center;
+	  justify-content: center;
     align-items: center;
     flex-direction: column;
     width: 100%;
