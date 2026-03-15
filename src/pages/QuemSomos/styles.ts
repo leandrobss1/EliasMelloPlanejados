@@ -187,8 +187,8 @@ export const QPodCastInfo2 = styled.h3`
 
 `
 export const QPodCastImg = styled.img`
-	width: 55rem;
-	height: 37rem;
+	width: 40rem;
+	height: 40rem;
 `
 
 export const QPodCastWrapperInfos = styled.div`
@@ -203,6 +203,7 @@ export const QPodCastLink = styled.a`
 	font-size: 1.5rem; 
 	font-weight: 500;
 	color: #ea8a01;
+	padding-bottom: 0.75rem;
 	text-decoration: none;
 	cursor: pointer;
 
@@ -213,6 +214,12 @@ export const QPodCastLink = styled.a`
 	&:hover {
 		transform: translateY(-2px);
 		color: #ea6a02;
+	}
+
+	svg {
+		color: black;
+		height: 30px;
+		width: 30px;
 	}
 	
 `

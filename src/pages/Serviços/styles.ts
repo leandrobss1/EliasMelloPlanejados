@@ -71,7 +71,7 @@ export const CardEtapas = styled.div``
 
 export const CardImageContainerEtapas = styled.div`
     display: flex;
-    margin: 2rem 0 0 10.65rem;
+    margin: 2rem 0 0 12rem;
 `
 export const CardContentEtapas = styled.div``
 

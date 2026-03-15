@@ -3,6 +3,10 @@ import * as S from './styles';
 import phImg1 from '../../assets/img/elias-melo-1.jpg';
 import phImg2 from '../../assets/img/elias-melo-2.jpg';
 import PodcastIcon from '../../assets/img/podcast-img.png'
+import { TfiYoutube } from "react-icons/tfi";
+import { FaInstagram } from "react-icons/fa";
+
+
 
 type Photo = {
     id: number,
@@ -62,11 +66,13 @@ export const QuemSomos: React.FC = () => {
                 <S.QPodCastImg src={PodcastIcon} alt='podcast-image'/>
 
                 <S.QPodCastWrapperInfos>
-                    <S.QPodCastInfo1>Estamos afinando os microfones… em breve no ar!</S.QPodCastInfo1>
+                    <S.QPodCastInfo1>Já estamos no ar 🎤🎙</S.QPodCastInfo1>
 
-                    <S.QPodCastInfo2>Spoiler: vem podcast por aí 👀🎧</S.QPodCastInfo2>
+                    <S.QPodCastInfo2>Venha conferir 👀🎧</S.QPodCastInfo2>
 
-                    <S.QPodCastLink href="https://www.instagram.com/conversanamedidapodcast/" target="_blank">@conversanamedidapodcast</S.QPodCastLink>
+                    <S.QPodCastLink href="https://www.instagram.com/conversanamedidapodcast/" target="_blank"><FaInstagram></FaInstagram>  conversanamedidapodcast</S.QPodCastLink>
+
+                    <S.QPodCastLink href="https://www.youtube.com/@ConversanamedidaPodcast" target='_blank'><TfiYoutube></TfiYoutube>  conversanamedidapodcast</S.QPodCastLink>
 
                 </S.QPodCastWrapperInfos>
 

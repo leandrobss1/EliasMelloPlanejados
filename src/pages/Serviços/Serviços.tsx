@@ -33,9 +33,11 @@ export const Serviços: React.FC = () => {
     <S.ServContainer>
       <S.ScrollTrack>
         <S.ScrollFill $progress={scrollProgress} />
-        <S.ScrollDot $top="10%" $active={scrollProgress >= 11} />
-        <S.ScrollDot $top="30%" $active={scrollProgress >= 30}/>               
-        <S.ScrollDot $top="50%" $active={scrollProgress >= 50}/>
+        <S.ScrollDot $top="11%" $active={scrollProgress >= 11} />
+        <S.ScrollDot $top="36%" $active={scrollProgress >= 36}/>               
+        <S.ScrollDot $top="60%" $active={scrollProgress >= 50}/>
+        <S.ScrollDot $top="85%" $active={scrollProgress >= 85}/>
+
       </S.ScrollTrack>
 
       <S.ServTitle>Nossos Produtos</S.ServTitle>
@@ -52,6 +54,12 @@ export const Serviços: React.FC = () => {
           title=''
           paragraph=''
         /> 
+
+        <ServiçosEtapas 
+          img={imagesEtapas[0].src}
+          title=''
+          paragraph=''
+        />
 
         <ServiçosEtapas 
           img={imagesEtapas[0].src}

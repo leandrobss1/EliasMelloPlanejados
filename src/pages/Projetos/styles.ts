@@ -3,7 +3,7 @@ import { pageFade } from "../../styles/GlobalStyles";
 
 export const ProjectContainer = styled.div`
     display: flex;
-	justify-content: center;
+	  justify-content: center;
     align-items: center;
     flex-direction: column;
     width: 100%;
@@ -108,6 +108,9 @@ export const ProjectsGrid = styled.div`
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   padding: 2rem;
+
+  animation: ${pageFade} 1.5s ease-in-out;
+
 `;
 
 export const GalleryContainer = styled.section`

@@ -11,8 +11,6 @@ export default function Home() {
       <Cards />
       <Carousel />
       <Google />
-
-
     </>
   )
 }
