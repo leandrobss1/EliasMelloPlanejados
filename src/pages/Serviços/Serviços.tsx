@@ -1,25 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import * as S from './styles';
-import EtImg1 from '../../assets/img/etapas-img.png'
+import EtImg1 from '../../assets/img/etapas-img.png';
 import ServiçosEtapas from './ServiçosEtapas';
 
 type Photo = {
-    id: number,
-    src: string,
-    alt?: string
-}
+  id: number;
+  src: string;
+  alt?: string;
+};
 
-const imagesEtapas: Photo[] = [
-    
-    { id: 1, src: EtImg1, alt: 'First Image' }
-]
+const imagesEtapas: Photo[] = [{ id: 1, src: EtImg1, alt: 'First Image' }];
 
 export const Serviços: React.FC = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      const windowHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const windowHeight =
+        document.documentElement.scrollHeight - window.innerHeight;
       const scrolled = (window.scrollY / windowHeight) * 100;
       setScrollProgress(scrolled);
     };
@@ -30,51 +28,23 @@ export const Serviços: React.FC = () => {
 
   return (
     <>
-    <S.ServContainer>
-      <S.ScrollTrack>
-        <S.ScrollFill $progress={scrollProgress} />
-        <S.ScrollDot $top="11%" $active={scrollProgress >= 11} />
-        <S.ScrollDot $top="36%" $active={scrollProgress >= 36}/>               
-        <S.ScrollDot $top="60%" $active={scrollProgress >= 50}/>
-        <S.ScrollDot $top="85%" $active={scrollProgress >= 85}/>
+      <S.ServContainer>
+        <S.ScrollTrack>
+          <S.ScrollFill $progress={scrollProgress} />
+          <S.ScrollDot $top="15%" $active={scrollProgress >= 16} />
+        </S.ScrollTrack>
 
-      </S.ScrollTrack>
+        <S.ServTitlle>Nossos Produtos</S.ServTitlle>
+        <S.ServParagraph>Conheça alguns de nossos serviços.</S.ServParagraph>
 
-      <S.ServTitle>Nossos Produtos</S.ServTitle>
-      <S.ServParagraph>Conheça alguns de nossos serviços.</S.ServParagraph>
-
-      <ServiçosEtapas 
-          img={imagesEtapas[0].src}
-          title=''
-          paragraph=''
-        /> 
-
-        <ServiçosEtapas 
-          img={imagesEtapas[0].src}
-          title=''
-          paragraph=''
-        /> 
-
-        <ServiçosEtapas 
-          img={imagesEtapas[0].src}
-          title=''
-          paragraph=''
-        />
-
-        <ServiçosEtapas 
-          img={imagesEtapas[0].src}
-          title=''
-          paragraph=''
-        />
-
-    </S.ServContainer>
-      
-      <S.DesignSection>
-        <S.ServTitle>Design com Propósito</S.ServTitle>
-        <S.ServParagraph>
-          Transformamos ideias em experiências visuais memoráveis.
-        </S.ServParagraph>
-      </S.DesignSection>
+        <S.DesignSection>
+          <ServiçosEtapas
+            img={imagesEtapas[0].src}
+            title="Design com Propósito"
+            paragraph="Transformamos ideias em experiências visuais memoráveis."
+          />
+        </S.DesignSection>
+      </S.ServContainer>
     </>
   );
 };
