@@ -6,7 +6,8 @@ export const contactItems = [
   {
     icon: <GrLocation />,
     title: 'NOSSO ENDEREÇO:',
-    value: 'Patos de Minas - MG - Brasil',
+    value:
+      'R. Edson Nunes de Paula, 70 - Nossa Sra. de Fátima, Patos de Minas - MG, 38701-638',
   },
   {
     icon: <LuPhone />,

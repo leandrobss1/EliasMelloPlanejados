@@ -15,9 +15,9 @@ export const ServContainer = styled.div`
 export const ScrollTrack = styled.div`
   position: absolute;
   left: 80px;
-  top: 180px;
+  top: 148px;
   width: 2px;
-  height: 70%;
+  height: 80%;
   background-color: #f5f1ea;
   z-index: 1;
 `;
@@ -67,21 +67,49 @@ export const ServParagraph = styled.h4`
 
 export const DesignSection = styled.div`
   display: flex;
+  flex-direction: column;
+  gap: 5rem;
   align-items: center;
 `;
 
 export const CardEtapas = styled.div`
   display: flex;
   align-items: center;
+  text-align: center;
   padding: 0;
 `;
 
 export const CardImageContainerEtapas = styled.div`
-  margin: 0px;
-  padding: 0px;
+  width: 500px;
+  height: 28.12rem;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.2s ease;
+  }
+
+  &:hover img {
+    transform: scale(1.1);
+  }
 `;
-export const CardContentEtapas = styled.div``;
 
-export const CardTitleEtapas = styled.h2``;
+export const CardContentEtapas = styled.div`
+  padding: 0;
+`;
 
-export const CardParagraphEtapas = styled.p``;
+export const CardTitleEtapas = styled.h2`
+  font-weight: 500;
+`;
+
+export const CardParagraphEtapas = styled.p`
+  width: 100%;
+  max-width: 28.25rem;
+  margin-top: 2rem;
+  color: #44444e;
+`;

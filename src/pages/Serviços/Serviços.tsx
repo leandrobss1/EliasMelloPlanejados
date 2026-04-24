@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import * as S from './styles';
-import EtImg1 from '../../assets/img/etapas-img.png';
+import EtImg1 from '../../assets/img/project-bedroom.jpg';
+import EtImg2 from '../../assets/img/project-kitchen.jpg';
+import EtImg3 from '../../assets/img/project-office.jpg';
+
 import ServiçosEtapas from './ServiçosEtapas';
 
 type Photo = {
@@ -9,7 +12,23 @@ type Photo = {
   alt?: string;
 };
 
-const imagesEtapas: Photo[] = [{ id: 1, src: EtImg1, alt: 'First Image' }];
+const imagesEtapas: Photo[] = [
+  {
+    id: 1,
+    src: EtImg1,
+    alt: 'FirsImage',
+  },
+  {
+    id: 2,
+    src: EtImg2,
+    alt: 'SecImage',
+  },
+  {
+    id: 3,
+    src: EtImg3,
+    alt: 'TritImage',
+  },
+];
 
 export const Serviços: React.FC = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -31,7 +50,9 @@ export const Serviços: React.FC = () => {
       <S.ServContainer>
         <S.ScrollTrack>
           <S.ScrollFill $progress={scrollProgress} />
-          <S.ScrollDot $top="15%" $active={scrollProgress >= 16} />
+          <S.ScrollDot $top="10%" $active={scrollProgress >= 10} />
+          <S.ScrollDot $top="45%" $active={scrollProgress >= 46} />
+          <S.ScrollDot $top="80%" $active={scrollProgress >= 81} />
         </S.ScrollTrack>
 
         <S.ServTitlle>Nossos Produtos</S.ServTitlle>
@@ -40,6 +61,16 @@ export const Serviços: React.FC = () => {
         <S.DesignSection>
           <ServiçosEtapas
             img={imagesEtapas[0].src}
+            title="Design com Propósito"
+            paragraph="Transformamos ideias em experiências visuais memoráveis."
+          />
+          <ServiçosEtapas
+            img={imagesEtapas[1].src}
+            title="Design com Propósito"
+            paragraph="Transformamos ideias em experiências visuais memoráveis."
+          />
+          <ServiçosEtapas
+            img={imagesEtapas[2].src}
             title="Design com Propósito"
             paragraph="Transformamos ideias em experiências visuais memoráveis."
           />
