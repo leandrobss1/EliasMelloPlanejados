@@ -61,18 +61,21 @@ export const Serviços: React.FC = () => {
         <S.DesignSection>
           <ServiçosEtapas
             img={imagesEtapas[0].src}
-            title="Design com Propósito"
-            paragraph="Transformamos ideias em experiências visuais memoráveis."
+            title="Linha Prime"
+            subtitle="Sofisticação & precisão"
+            paragraph="Acabamento superior e detalhes que fazem a diferença. O padrão de excelência."
           />
           <ServiçosEtapas
             img={imagesEtapas[1].src}
-            title="Design com Propósito"
-            paragraph="Transformamos ideias em experiências visuais memoráveis."
+            title="Linha One"
+            subtitle="Luxo sem limite"
+            paragraph="Ferragens de grife. Materiais nobres. Projeto sem concessões. Para quem não compara preço."
           />
           <ServiçosEtapas
             img={imagesEtapas[2].src}
-            title="Design com Propósito"
-            paragraph="Transformamos ideias em experiências visuais memoráveis."
+            title="Linha Tech"
+            subtitle="Inovação invisível"
+            paragraph="Tecnologia, autonomia e ferragens inteligentes. Funcionalidade que surpreende."
           />
         </S.DesignSection>
       </S.ServContainer>

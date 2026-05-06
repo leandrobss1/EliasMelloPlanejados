@@ -17,7 +17,7 @@ export const ScrollTrack = styled.div`
   left: 80px;
   top: 148px;
   width: 2px;
-  height: 80%;
+  height: 81%;
   background-color: #f5f1ea;
   z-index: 1;
 `;
@@ -25,7 +25,7 @@ export const ScrollTrack = styled.div`
 export const ScrollFill = styled.div<{ $progress: number }>`
   width: 100%;
   height: ${(props) => props.$progress}%;
-  background-color: #ea8a01;
+  background-color: #b49663;
   transition: height 0.2s ease-out;
 `;
 
@@ -37,9 +37,9 @@ export const ScrollDot = styled.div<{ $top: string; $active: boolean }>`
   width: 1.57rem;
   height: 1.57rem;
 
-  background-color: ${(props) => (props.$active ? '#ea8a01' : '#f5f1ea')};
+  background-color: ${(props) => (props.$active ? '#b49663' : '#f5f1ea')};
 
-  border: 2px solid #ea8a01;
+  border: 2px solid #b49663;
   border-radius: 50%;
   z-index: 2;
 
@@ -74,7 +74,7 @@ export const DesignSection = styled.div`
 
 export const CardEtapas = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   text-align: center;
   padding: 0;
 `;
@@ -101,15 +101,30 @@ export const CardImageContainerEtapas = styled.div`
 
 export const CardContentEtapas = styled.div`
   padding: 0;
+  gap: 10px;
+  box-shadow: 1px 1px 1px #b49663;
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 5px 10px #b49663;
+    transform: translateY(-3px);
+  }
 `;
 
-export const CardTitleEtapas = styled.h2`
+export const CardTitleEtapas = styled.h1`
+  margin-bottom: 1rem;
+  color: #2c2c2c;
   font-weight: 500;
+`;
+
+export const CardSubTitleEtapas = styled.span`
+  color: #b49663;
+  text-transform: uppercase;
 `;
 
 export const CardParagraphEtapas = styled.p`
   width: 100%;
   max-width: 28.25rem;
   margin-top: 2rem;
-  color: #44444e;
+  color: #2c2c2c;
 `;

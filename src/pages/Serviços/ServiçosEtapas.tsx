@@ -1,14 +1,15 @@
-import React, { forwardRef } from 'react';
+import { forwardRef } from 'react';
 import * as S from './styles';
 
 interface ServiçosEtapasProps {
   img: string;
   title: string;
+  subtitle?: string;
   paragraph: string;
 }
 
 export const ServiçosEtapas = forwardRef<HTMLDivElement, ServiçosEtapasProps>(
-  ({ img, title, paragraph }, ref) => (
+  ({ img, title, paragraph, subtitle }, ref) => (
     <S.CardEtapas ref={ref}>
       <S.CardImageContainerEtapas>
         <img
@@ -19,6 +20,7 @@ export const ServiçosEtapas = forwardRef<HTMLDivElement, ServiçosEtapasProps>(
       </S.CardImageContainerEtapas>
       <S.CardContentEtapas>
         <S.CardTitleEtapas>{title}</S.CardTitleEtapas>
+        <S.CardSubTitleEtapas>{subtitle}</S.CardSubTitleEtapas>
         <S.CardParagraphEtapas>{paragraph}</S.CardParagraphEtapas>
       </S.CardContentEtapas>
     </S.CardEtapas>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { projects } from '../../data/project';
-import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
+import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io';
 import * as S from './styles';
 
 export const ProjetoGaleria: React.FC = () => {
@@ -17,9 +17,7 @@ export const ProjetoGaleria: React.FC = () => {
   const handleNext = () => {
     if (activeIndex === null) return;
 
-    setActiveIndex(
-      (activeIndex + 1) % project.images.length
-    );
+    setActiveIndex((activeIndex + 1) % project.images.length);
   };
 
   const handlePrev = () => {
@@ -58,7 +56,7 @@ export const ProjetoGaleria: React.FC = () => {
             </S.LightboxClose>
 
             <S.PassImageLeft onClick={handlePrev}>
-              <IoIosArrowBack/>
+              <IoIosArrowBack />
             </S.PassImageLeft>
 
             <S.PassImageRight onClick={handleNext}>

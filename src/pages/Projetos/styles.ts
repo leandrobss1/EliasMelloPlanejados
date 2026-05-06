@@ -1,41 +1,38 @@
-import styled from "styled-components";
-import { pageFade } from "../../styles/GlobalStyles";
+import styled from 'styled-components';
+import { pageFade } from '../../styles/GlobalStyles';
 
 export const ProjectContainer = styled.div`
-    display: flex;
-	  justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    
-    animation: ${pageFade} 1.5s ease-in-out;
-    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
 
-`
-export const ProjectTitle = styled.h1` 
-    padding: 2rem 0 2rem 0;
-    font-weight: 500;
+  animation: ${pageFade} 1.5s ease-in-out;
+`;
+export const ProjectTitle = styled.h1`
+  padding: 2rem 0 2rem 0;
+  font-weight: 500;
 
-    @media (max-width: 425px) and (min-width: 375px) {
-      font-size: 1.4rem;      
-    }
-    
-`
+  @media (max-width: 425px) and (min-width: 375px) {
+    font-size: 1.4rem;
+  }
+`;
 
 export const ProjectParagraph = styled.h2`
-    font-size: 1.4rem;
-    font-weight: 200;
+  font-size: 1.4rem;
+  font-weight: 200;
 
-    @media (max-width: 768px) and (min-width: 425px) {
-		font-size: 1.3rem;
+  @media (max-width: 768px) and (min-width: 425px) {
+    font-size: 1.3rem;
     text-align: center;
-		width: 80%;
-	}
+    width: 80%;
+  }
 
-    @media (max-width: 425px) and (min-width: 375px) {
-      font-size: 1rem;      
-    }
-`
+  @media (max-width: 425px) and (min-width: 375px) {
+    font-size: 1rem;
+  }
+`;
 
 export const CardContainer = styled.div`
   position: relative;
@@ -45,7 +42,6 @@ export const CardContainer = styled.div`
 
   cursor: pointer;
 `;
-
 
 export const CardImage = styled.img`
   width: 100%;
@@ -57,7 +53,6 @@ export const CardImage = styled.img`
   backface-visibility: hidden;
   transform: translateZ(0);
 `;
-
 
 export const CardOverlay = styled.div`
   position: absolute;
@@ -90,14 +85,14 @@ export const CardInfo = styled.div`
 
 export const CardTitleInfo = styled.h1`
   text-align: center;
-  font-weight: 600;  
+  font-weight: 600;
 `;
 
 export const CardSpan = styled.span`
   display: block;
   text-align: center;
   font-weight: 500;
-`;  
+`;
 
 export const ProjectsGrid = styled.div`
   width: 100%;
@@ -110,7 +105,6 @@ export const ProjectsGrid = styled.div`
   padding: 2rem;
 
   animation: ${pageFade} 1.5s ease-in-out;
-
 `;
 
 export const GalleryContainer = styled.section`
@@ -152,7 +146,9 @@ export const GalleryImage = styled.img`
   border-radius: 3px;
   background-color: #f2f2f2;
 
-  transition: transform 0.35s ease, filter 0.35s ease;
+  transition:
+    transform 0.35s ease,
+    filter 0.35s ease;
 
   &:hover {
     transform: scale(1.03);
@@ -187,7 +183,6 @@ export const LightboxContent = styled.div`
   justify-content: center;
 `;
 
-
 export const LightboxImage = styled.img`
   max-width: 90vw;
   max-height: 90vh;
@@ -195,7 +190,6 @@ export const LightboxImage = styled.img`
   display: block;
   z-index: 1;
 `;
-
 
 export const LightboxClose = styled.button`
   position: absolute;
@@ -209,7 +203,7 @@ export const LightboxClose = styled.button`
   cursor: pointer;
 
   &:hover {
-    color: #FF3838;
+    color: #ff3838;
   }
 `;
 
@@ -229,13 +223,11 @@ export const PassImageLeft = styled.button`
 
   opacity: 0.7;
 
-&:hover {
-  opacity: 1;
-  transform: translateY(-50%) scale(1.1);
-}
-
+  &:hover {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.1);
+  }
 `;
-
 
 export const PassImageRight = styled.button`
   position: absolute;
@@ -253,9 +245,8 @@ export const PassImageRight = styled.button`
 
   opacity: 0.7;
 
-&:hover {
-  opacity: 1;
-  transform: translateY(-50%) scale(1.1);
-}
-
+  &:hover {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.1);
+  }
 `;
