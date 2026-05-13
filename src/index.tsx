@@ -3,17 +3,21 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import App from './App';
 import Home from './pages/Home';
-import {Projetos} from './pages/Projetos/Projetos';
-import {Serviços} from './pages/Serviços/Serviços';
-import {QuemSomos} from './pages/QuemSomos/QuemSomos';
-import {Orcamento} from './pages/Orçamento/Orcamento';
-
+import { Projetos } from './pages/Projetos/Projetos';
+import { Serviços } from './pages/Serviços/Serviços';
+import { QuemSomos } from './pages/QuemSomos/QuemSomos';
+import { Orcamento } from './pages/Orçamento/Orcamento';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+
 import { ProjetoGaleria } from './pages/Projetos/ProjetoGaleria';
+
+import LoginAdmin from './pages/Admin/LoginAdmin';
+
+import Dashboard from './pages/Admin/Dashboard';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -28,8 +32,11 @@ root.render(
           <Route path="projects" element={<Projetos />} />
           <Route path="projects/:id" element={<ProjetoGaleria />} />
           <Route path="services" element={<Serviços />} />
-		      <Route path="budget" element={<Orcamento />} />
-          <Route path='about-us' element={<QuemSomos/>} />
+          <Route path="budget" element={<Orcamento />} />
+          <Route path="about-us" element={<QuemSomos />} />
+
+          <Route path="loginAdmin-x99" element={<LoginAdmin />} />
+          <Route path="admin-dashboard" element={<Dashboard />} />
         </Route>
       </Routes>
     </BrowserRouter>

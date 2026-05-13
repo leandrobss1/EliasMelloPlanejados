@@ -1,0 +1,177 @@
+import { useEffect, useState } from 'react';
+import { Navigate } from 'react-router-dom';
+
+type Project = {
+  id: string;
+  title: string;
+  location: string;
+  coverImage: string;
+  images: string[];
+};
+
+export default function Dashboard() {
+  const isAdmin = localStorage.getItem('admin-auth');
+
+  const [loading, setLoading] = useState(true);
+  const [projects, setProjects] = useState<Project[]>([]);
+
+  const [title, setTitle] = useState('');
+  const [location, setLocation] = useState('');
+
+  const [coverImage, setCoverImage] = useState<File | null>(null);
+  const [imageInput, setImageInput] = useState<File | null>(null);
+
+  const [images, setImages] = useState<string[]>([]);
+
+  useEffect(() => {
+    const saved = localStorage.getItem('projects');
+
+    if (saved) {
+      setProjects(JSON.parse(saved));
+    }
+
+    setLoading(false);
+  }, []);
+
+  useEffect(() => {
+    if (!loading) {
+      localStorage.setItem('projects', JSON.stringify(projects));
+    }
+  }, [projects, loading]);
+
+  if (!loading && isAdmin !== 'true') {
+    return <Navigate to="/" />;
+  }
+
+  const toBase64 = (file: File): Promise<string> =>
+    new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = () => resolve(reader.result as string);
+      reader.onerror = reject;
+    });
+
+  const addImage = async () => {
+    if (!imageInput) return;
+
+    const base64 = await toBase64(imageInput);
+    setImages((prev) => [...prev, base64]);
+    setImageInput(null);
+  };
+
+  const removeImage = (index: number) => {
+    setImages((prev) => prev.filter((_, i) => i !== index));
+  };
+
+  const createProject = async () => {
+    if (!title || !location || !coverImage || images.length === 0) {
+      alert('Preencha tudo');
+      return;
+    }
+
+    const coverBase64 = await toBase64(coverImage);
+
+    const newProject: Project = {
+      id: crypto.randomUUID(),
+      title,
+      location,
+      coverImage: coverBase64,
+      images,
+    };
+
+    setProjects((prev) => [...prev, newProject]);
+
+    setTitle('');
+    setLocation('');
+    setCoverImage(null);
+    setImages([]);
+  };
+
+  const deleteProject = (id: string) => {
+    setProjects((prev) => prev.filter((p) => p.id !== id));
+  };
+
+  return (
+    <div style={{ padding: 20 }}>
+      <h1>Admin - Criar Álbuns</h1>
+
+      <input
+        placeholder="Título"
+        value={title}
+        onChange={(e) => setTitle(e.target.value)}
+      />
+
+      <input
+        placeholder="Localização"
+        value={location}
+        onChange={(e) => setLocation(e.target.value)}
+      />
+
+      <hr />
+
+      <h3>Capa do álbum</h3>
+      <input
+        type="file"
+        accept="image/*"
+        onChange={(e) => setCoverImage(e.target.files?.[0] || null)}
+      />
+
+      <hr />
+
+      <h3>Imagens do álbum</h3>
+
+      <input
+        type="file"
+        accept="image/*"
+        onChange={(e) => setImageInput(e.target.files?.[0] || null)}
+      />
+
+      <button onClick={addImage}>Adicionar imagem</button>
+
+      <ul>
+        {images.map((img, i) => (
+          <li key={i} style={{ marginBottom: 10 }}>
+            <img
+              src={img}
+              alt=""
+              style={{
+                width: 120,
+                height: 80,
+                objectFit: 'cover',
+                display: 'block',
+              }}
+            />
+
+            <button onClick={() => removeImage(i)}>Remover</button>
+          </li>
+        ))}
+      </ul>
+
+      <button onClick={createProject}>Criar álbum</button>
+
+      <hr />
+
+      <h2>Álbuns criados</h2>
+
+      {projects.map((p) => (
+        <div key={p.id} style={{ marginBottom: 20 }}>
+          <h3>{p.title}</h3>
+          <p>{p.location}</p>
+
+          <img
+            src={p.coverImage}
+            alt=""
+            style={{
+              width: 150,
+              height: 100,
+              objectFit: 'cover',
+              display: 'block',
+            }}
+          />
+
+          <button onClick={() => deleteProject(p.id)}>Remover álbum</button>
+        </div>
+      ))}
+    </div>
+  );
+}
