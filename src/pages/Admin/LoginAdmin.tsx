@@ -4,16 +4,23 @@ import { useNavigate } from 'react-router-dom';
 
 export default function LoginAdmin() {
   const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('');
 
   const navigate = useNavigate();
 
-  const handleLogin = () => {
-    if (password === 'gabrielelias') {
-      localStorage.setItem('admin-auth', 'true');
+  const handleLogin = async () => {
+    const response = await fetch('http://localhost:3333/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, password }),
+    });
 
-      navigate('/admin-dashboard');
+    if (response.ok) {
+      const data = await response.json();
+      localStorage.setItem('token', data.token);
+      navigate('/admin/dashboard');
     } else {
-      alert('Senha incorreta');
+      alert('Login inválido. Tente novamente.');
     }
   };
 
@@ -26,8 +33,15 @@ export default function LoginAdmin() {
       <h1>Login Admin</h1>
 
       <input
+        type="text"
+        placeholder="Digite seu email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+      />
+
+      <input
         type="password"
-        placeholder="Senha"
+        placeholder="Digite sua senha"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />

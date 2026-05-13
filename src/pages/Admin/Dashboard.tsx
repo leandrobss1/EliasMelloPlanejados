@@ -10,7 +10,7 @@ type Project = {
 };
 
 export default function Dashboard() {
-  const isAdmin = localStorage.getItem('admin-auth');
+  const token = localStorage.getItem('token');
 
   const [loading, setLoading] = useState(true);
   const [projects, setProjects] = useState<Project[]>([]);
@@ -39,7 +39,7 @@ export default function Dashboard() {
     }
   }, [projects, loading]);
 
-  if (!loading && isAdmin !== 'true') {
+  if (!loading && (!token || token === 'undefined')) {
     return <Navigate to="/" />;
   }
 

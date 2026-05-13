@@ -18,6 +18,7 @@ import { ProjetoGaleria } from './pages/Projetos/ProjetoGaleria';
 import LoginAdmin from './pages/Admin/LoginAdmin';
 
 import Dashboard from './pages/Admin/Dashboard';
+import ProtectedRoute from './ProtectedRoute';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -35,8 +36,15 @@ root.render(
           <Route path="budget" element={<Orcamento />} />
           <Route path="about-us" element={<QuemSomos />} />
 
-          <Route path="loginAdmin-x99" element={<LoginAdmin />} />
-          <Route path="admin-dashboard" element={<Dashboard />} />
+          <Route path="login" element={<LoginAdmin />} />
+          <Route
+            path="admin/dashboard"
+            element={
+              <ProtectedRoute>
+                <Dashboard />
+              </ProtectedRoute>
+            }
+          />
         </Route>
       </Routes>
     </BrowserRouter>
