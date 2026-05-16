@@ -1,21 +1,20 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import styled from 'styled-components';
-import * as S from "./styles";
-import * as HeaderStyles from "../../components/Header/styles";
-import { MapLocation } from "../../components/MapLocation/MapLocation";
-import { GrLocation } from "react-icons/gr";
-import { LuPhone } from "react-icons/lu";
-import { SlEnvolopeLetter } from "react-icons/sl";
-import { ContactItem } from "./ContactItem";
-import { contactItems } from "./contactItems";
-import { contactSocial } from "./contactSocial";
-import ContactSocials from "./ContactSocials";
-
+import * as S from './styles';
+import * as HeaderStyles from '../../components/Header/styles';
+import { MapLocation } from '../../components/MapLocation/MapLocation';
+import { GrLocation } from 'react-icons/gr';
+import { LuPhone } from 'react-icons/lu';
+import { SlEnvolopeLetter } from 'react-icons/sl';
+import { ContactItem } from './ContactItem';
+import { contactItems } from './contactItems';
+import { contactSocial } from './contactSocial';
+import ContactSocials from './ContactSocials';
 
 export const CustomButton = styled(HeaderStyles.OrçButton)`
-  font-family: "Source Code Pro", monospace;
+  font-family: 'Source Code Pro', monospace;
   font-weight: 600;
-  margin-bottom: 0.50rem;
+  margin-bottom: 0.5rem;
   border-radius: 0;
   background-color: #ffff;
   color: #000000;
@@ -24,40 +23,41 @@ export const CustomButton = styled(HeaderStyles.OrçButton)`
   &:hover {
     font-weight: 700;
     border-bottom: 4px solid #000000;
-		border-right: 4px solid #000000; 
+    border-right: 4px solid #000000;
   }
-`
+`;
 export const CustomTitle = styled(S.OrçTitleContain)`
   padding-bottom: 2rem;
-`
+`;
 
 export const Orcamento: React.FC = () => {
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: ""
+    name: '',
+    email: '',
+    phone: '',
+    message: '',
   });
 
   const formatPhone = (value: string) => {
-  value = value.replace(/\D/g, ""); 
+    value = value.replace(/\D/g, '');
 
-  if (value.length > 10) {
-    return value.replace(/(\d{2})(\d{5})(\d{4})/, "($1) $2-$3");
-  } else {
-    return value.replace(/(\d{2})(\d{4})(\d{4})/, "($1) $2-$3");
-  }
-};
+    if (value.length > 10) {
+      return value.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
+    } else {
+      return value.replace(/(\d{2})(\d{4})(\d{4})/, '($1) $2-$3');
+    }
+  };
 
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-  const { name, value } = e.target;
-
-  setFormData({
-    ...formData,
-    [name]: name === "phone" ? formatPhone(value) : value
-  });
-};
+    setFormData({
+      ...formData,
+      [name]: name === 'phone' ? formatPhone(value) : value,
+    });
+  };
 
   const [isLoading, setIsLoading] = useState(false);
 
@@ -67,34 +67,32 @@ export const Orcamento: React.FC = () => {
     e.preventDefault();
 
     if (!authorized) {
-    alert("Você precisa autorizar o uso dos dados para enviar a mensagem.");
-    return;
-  }
+      alert('Você precisa autorizar o uso dos dados para enviar a mensagem.');
+      return;
+    }
 
     setIsLoading(true);
 
     try {
-      const response = await fetch("http://localhost:3333/api/send-email", {
-        method: "POST",
+      const response = await fetch('http://localhost:3333/api/send-email', {
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json"
+          'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify(formData),
       });
 
       const result = await response.json();
-      alert(result.message || "Mensagem enviada com sucesso!");
+      alert(result.message || 'Mensagem enviada com sucesso!');
 
       setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      message: ""
-    });
-
-
+        name: '',
+        email: '',
+        phone: '',
+        message: '',
+      });
     } catch (error) {
-      alert("Erro ao enviar. Tente novamente.");
+      alert('Erro ao enviar. Tente novamente.');
     } finally {
       setIsLoading(false);
     }
@@ -102,108 +100,113 @@ export const Orcamento: React.FC = () => {
 
   return (
     <S.OrçContainer>
-      
       <S.OrçTitle>Nossos contatos</S.OrçTitle>
 
       <S.OrçGrid>
-
-      <S.OrçForm onSubmit={handleSubmit}>
-        <S.OrçTitleContain>Envie sua mensagem</S.OrçTitleContain>
-        <S.OrçDiv>
-          <S.OrçLabel>Nome </S.OrçLabel>
-          <S.OrçInput
-            type="text"
-            name="name"
-            required
-            value={formData.name}
-            onChange={handleChange}
-            placeholder="Seu nome completo"
-          />
-        </S.OrçDiv>
-
-        <S.OrçDiv>
-          <S.OrçLabel>Email </S.OrçLabel>
-          <S.OrçInput
-            type="email"
-            name="email"
-            required
-            value={formData.email}
-            onChange={handleChange}
-            placeholder="Seu melhor email"
-          />
-        </S.OrçDiv>
-
-        <S.OrçDiv>
-          <S.OrçLabel>Telefone </S.OrçLabel>
-          <S.OrçInput
-            type="text"
-            name="phone"
-            required
-            value={formData.phone}
-            onChange={handleChange}
-            placeholder="EX: (99) 99999-9999"
+        <S.OrçForm onSubmit={handleSubmit}>
+          <S.OrçTitleContain>Envie sua mensagem</S.OrçTitleContain>
+          <S.OrçDiv>
+            <S.OrçLabel>Nome </S.OrçLabel>
+            <S.OrçInput
+              type="text"
+              name="name"
+              required
+              value={formData.name}
+              onChange={handleChange}
+              placeholder="Seu nome completo"
             />
-        </S.OrçDiv>
+          </S.OrçDiv>
 
-        <S.OrçDiv>
-          <S.OrçLabel>Mensagem </S.OrçLabel>
-          <S.OrçTextarea
-            name="message"
-            required
-            maxLength={100}
-            value={formData.message}
-            onChange={handleChange}
-            placeholder="Conte-nos sobre o seu projeto dos sonhos..."
-          />
-        </S.OrçDiv>
+          <S.OrçDiv>
+            <S.OrçLabel>Email </S.OrçLabel>
+            <S.OrçInput
+              type="email"
+              name="email"
+              required
+              value={formData.email}
+              onChange={handleChange}
+              placeholder="Seu melhor email"
+            />
+          </S.OrçDiv>
 
-        <CustomButton type="submit" disabled={isLoading}>{isLoading ? "Enviando..." : "Enviar"}</CustomButton>
+          <S.OrçDiv>
+            <S.OrçLabel>Telefone </S.OrçLabel>
+            <S.OrçInput
+              type="text"
+              name="phone"
+              required
+              value={formData.phone}
+              onChange={handleChange}
+              placeholder="EX: (99) 99999-9999"
+            />
+          </S.OrçDiv>
 
-        <S.OrçWrapper/>
-         <S.OrçLabelVerify>
-             <S.OrçInputVerify
-                 type="checkbox"
-                  checked={authorized}
-                  onChange={(e) => setAuthorized(e.target.checked)}
-                  />                 
-                  *Autorizo que os meus dados pessoais (nome, e-mail, telefone) sejam utilizados para finalidade de retorno ao contato solicitado.     
+          <S.OrçDiv>
+            <S.OrçLabel>Mensagem </S.OrçLabel>
+            <S.OrçTextarea
+              name="message"
+              required
+              maxLength={100}
+              value={formData.message}
+              onChange={handleChange}
+              placeholder="Conte-nos sobre o seu projeto dos sonhos..."
+            />
+          </S.OrçDiv>
+
+          <CustomButton type="submit" disabled={isLoading}>
+            {isLoading ? 'Enviando...' : 'Enviar'}
+          </CustomButton>
+
+          <S.OrçWrapper />
+          <S.OrçLabelVerify>
+            <S.OrçInputVerify
+              type="checkbox"
+              checked={authorized}
+              onChange={(e) => setAuthorized(e.target.checked)}
+            />
+            *Autorizo que os meus dados pessoais (nome, e-mail, telefone) sejam
+            utilizados para finalidade de retorno ao contato solicitado.
           </S.OrçLabelVerify>
-        <S.OrçWrapper/>
-      </S.OrçForm>
-      
-      <S.OrçContain>
-        <S.OrçWrapperRight>
+          <S.OrçWrapper />
+        </S.OrçForm>
 
-          <S.OrçSpanContain>[ Outros meios de contato]</S.OrçSpanContain>
+        <S.OrçContain>
+          <S.OrçWrapperRight>
+            <S.OrçSpanContain>[ Outros meios de contato]</S.OrçSpanContain>
 
-          <CustomTitle>Fale com a gente</CustomTitle>
-          
-          <S.OrçParagraphContain>Você também pode falar com nossa equipe através dos contatos abaixo</S.OrçParagraphContain>
-      {contactItems.map((item, index) => (
-       <ContactItem
-         key={index}
-          icon={item.icon}
-          title={item.title}
-          value={item.value}
-  />
-))}
-    <ContactSocials>
-       {contactSocial.map((item, index) => (
-      <S.ContactHeaderSocial key={index}>
-        <a href={item.href} target="_blank" rel="noopener noreferrer" arial-label="Redes Sociais">
-        {item.svg}
-        </a>
-      </S.ContactHeaderSocial>
-  ))}
-    </ContactSocials>
- 
-      </S.OrçWrapperRight>
-      </S.OrçContain>
-    
+            <CustomTitle>Fale com a gente</CustomTitle>
 
-     </S.OrçGrid>
+            <S.OrçParagraphContain>
+              Você também pode falar com nossa equipe através dos contatos
+              abaixo
+            </S.OrçParagraphContain>
+            {contactItems.map((item, index) => (
+              <ContactItem
+                key={index}
+                icon={item.icon}
+                title={item.title}
+                value={item.value}
+              />
+            ))}
+            <ContactSocials>
+              {contactSocial.map((item, index) => (
+                <S.ContactHeaderSocial key={index}>
+                  <a
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    arial-label="Redes Sociais"
+                  >
+                    {item.svg}
+                  </a>
+                </S.ContactHeaderSocial>
+              ))}
+            </ContactSocials>
+          </S.OrçWrapperRight>
+        </S.OrçContain>
+      </S.OrçGrid>
 
-      <MapLocation/>
+      <MapLocation />
     </S.OrçContainer>
   );
 };

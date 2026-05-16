@@ -16,6 +16,10 @@ router.post('/api/send-email', async (req, res) => {
 router.post('/login', (req, res) => {
   const { email, password } = req.body;
 
+  console.log('BODY:', req.body);
+  console.log('ENV EMAIL:', process.env.LOG_EMAIL);
+  console.log('ENV PASS:', process.env.LOG_PASSWORD);
+
   if (
     email === process.env.LOG_EMAIL &&
     password === process.env.LOG_PASSWORD

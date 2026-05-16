@@ -1,14 +1,34 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { projects } from '../../data/project';
+import { projects as staticProjects } from '../../data/project';
 import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io';
 import * as S from './styles';
 
+type Project = {
+  id: string;
+  title: string;
+  location: string;
+  coverImage: string;
+  images: string[];
+};
+
 export const ProjetoGaleria: React.FC = () => {
   const { id } = useParams();
+
+  const [project, setProject] = useState<Project | null>(null);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
-  const project = projects.find((p) => p.id === id);
+  useEffect(() => {
+    const saved = localStorage.getItem('projects');
+
+    const dynamicProjects: Project[] = saved ? JSON.parse(saved) : [];
+
+    const allProjects = [...staticProjects, ...dynamicProjects];
+
+    const found = allProjects.find((p) => p.id === id);
+
+    setProject(found || null);
+  }, [id]);
 
   if (!project) {
     return <h2>Projeto não encontrado</h2>;
@@ -16,13 +36,11 @@ export const ProjetoGaleria: React.FC = () => {
 
   const handleNext = () => {
     if (activeIndex === null) return;
-
     setActiveIndex((activeIndex + 1) % project.images.length);
   };
 
   const handlePrev = () => {
     if (activeIndex === null) return;
-
     setActiveIndex(
       (activeIndex - 1 + project.images.length) % project.images.length
     );
