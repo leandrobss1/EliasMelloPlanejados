@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { Navigate } from 'react-router-dom';
 
+import * as S from './styles';
+
 type Project = {
   id: string;
   title: string;
@@ -92,35 +94,31 @@ export default function Dashboard() {
   };
 
   return (
-    <div style={{ padding: 20 }}>
-      <h1>Admin - Criar Álbuns</h1>
+    <S.DashboardWrapper style={{ padding: 20 }}>
+      <S.DashboardTitle>Admin - Criar Álbuns</S.DashboardTitle>
 
-      <input
+      <S.DashboardInput
         placeholder="Título"
         value={title}
         onChange={(e) => setTitle(e.target.value)}
       />
 
-      <input
+      <S.DashboardInput
         placeholder="Localização"
         value={location}
         onChange={(e) => setLocation(e.target.value)}
       />
 
-      <hr />
-
-      <h3>Capa do álbum</h3>
-      <input
+      <S.DashboardSubTitle>Capa do álbum</S.DashboardSubTitle>
+      <S.DashboardInput
         type="file"
         accept="image/*"
         onChange={(e) => setCoverImage(e.target.files?.[0] || null)}
       />
 
-      <hr />
+      <S.DashboardSubTitle>Imagens do álbum</S.DashboardSubTitle>
 
-      <h3>Imagens do álbum</h3>
-
-      <input
+      <S.DashboardInput
         type="file"
         accept="image/*"
         onChange={(e) => setImageInput(e.target.files?.[0] || null)}
@@ -149,8 +147,6 @@ export default function Dashboard() {
 
       <button onClick={createProject}>Criar álbum</button>
 
-      <hr />
-
       <h2>Álbuns criados</h2>
 
       {projects.map((p) => (
@@ -172,6 +168,6 @@ export default function Dashboard() {
           <button onClick={() => deleteProject(p.id)}>Remover álbum</button>
         </div>
       ))}
-    </div>
+    </S.DashboardWrapper>
   );
 }
