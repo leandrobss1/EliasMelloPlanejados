@@ -94,80 +94,82 @@ export default function Dashboard() {
   };
 
   return (
-    <S.DashboardWrapper style={{ padding: 20 }}>
-      <S.DashboardTitle>Admin - Criar Álbuns</S.DashboardTitle>
+    <S.DashboardContainer>
+      <S.DashboardWrapper>
+        <S.DashboardTitle>Admin - Criar Álbuns</S.DashboardTitle>
 
-      <S.DashboardInput
-        placeholder="Título"
-        value={title}
-        onChange={(e) => setTitle(e.target.value)}
-      />
+        <S.DashboardInput
+          placeholder="Título"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+        />
 
-      <S.DashboardInput
-        placeholder="Localização"
-        value={location}
-        onChange={(e) => setLocation(e.target.value)}
-      />
+        <S.DashboardInput
+          placeholder="Localização"
+          value={location}
+          onChange={(e) => setLocation(e.target.value)}
+        />
 
-      <S.DashboardSubTitle>Capa do álbum</S.DashboardSubTitle>
-      <S.DashboardInput
-        type="file"
-        accept="image/*"
-        onChange={(e) => setCoverImage(e.target.files?.[0] || null)}
-      />
+        <S.DashboardSubTitle>Capa do álbum</S.DashboardSubTitle>
+        <S.DashboardInput
+          type="file"
+          accept="image/*"
+          onChange={(e) => setCoverImage(e.target.files?.[0] || null)}
+        />
 
-      <S.DashboardSubTitle>Imagens do álbum</S.DashboardSubTitle>
+        <S.DashboardSubTitle>Imagens do álbum</S.DashboardSubTitle>
 
-      <S.DashboardInput
-        type="file"
-        accept="image/*"
-        onChange={(e) => setImageInput(e.target.files?.[0] || null)}
-      />
+        <S.DashboardInput
+          type="file"
+          accept="image/*"
+          onChange={(e) => setImageInput(e.target.files?.[0] || null)}
+        />
 
-      <button onClick={addImage}>Adicionar imagem</button>
+        <button onClick={addImage}>Adicionar imagem</button>
 
-      <ul>
-        {images.map((img, i) => (
-          <li key={i} style={{ marginBottom: 10 }}>
+        <ul>
+          {images.map((img, i) => (
+            <li key={i} style={{ marginBottom: 10 }}>
+              <img
+                src={img}
+                alt=""
+                style={{
+                  width: 120,
+                  height: 80,
+                  objectFit: 'cover',
+                  display: 'block',
+                }}
+              />
+
+              <button onClick={() => removeImage(i)}>Remover</button>
+            </li>
+          ))}
+        </ul>
+
+        <button onClick={createProject}>Criar álbum</button>
+
+        <h3>Álbuns criados</h3>
+
+        {projects.map((p) => (
+          <div key={p.id} style={{ marginBottom: 20 }}>
+            <h3>{p.title}</h3>
+            <p>{p.location}</p>
+
             <img
-              src={img}
+              src={p.coverImage}
               alt=""
               style={{
-                width: 120,
-                height: 80,
+                width: 150,
+                height: 100,
                 objectFit: 'cover',
                 display: 'block',
               }}
             />
 
-            <button onClick={() => removeImage(i)}>Remover</button>
-          </li>
+            <button onClick={() => deleteProject(p.id)}>Remover álbum</button>
+          </div>
         ))}
-      </ul>
-
-      <button onClick={createProject}>Criar álbum</button>
-
-      <h2>Álbuns criados</h2>
-
-      {projects.map((p) => (
-        <div key={p.id} style={{ marginBottom: 20 }}>
-          <h3>{p.title}</h3>
-          <p>{p.location}</p>
-
-          <img
-            src={p.coverImage}
-            alt=""
-            style={{
-              width: 150,
-              height: 100,
-              objectFit: 'cover',
-              display: 'block',
-            }}
-          />
-
-          <button onClick={() => deleteProject(p.id)}>Remover álbum</button>
-        </div>
-      ))}
-    </S.DashboardWrapper>
+      </S.DashboardWrapper>
+    </S.DashboardContainer>
   );
 }

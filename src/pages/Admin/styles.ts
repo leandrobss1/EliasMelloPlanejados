@@ -11,7 +11,7 @@ export const LoginDiv = styled.div`
   height: auto;
   border: 1px solid #f5f4f4;
   box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.2);
-  gap: 0.8rem;
+  gap: 0.6rem;
 `;
 
 export const LoginWrapper = styled.div`
@@ -55,14 +55,35 @@ export const CustomButton = styled(HeaderStyles.OrçButton)`
   }
 `;
 
+export const DashboardWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: fit-content;
+
+  align-items: center;
+  border: 1px solid #991a1a;
+  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.2);
+
+  padding: 2rem;
+  gap: 0.8rem;
+`;
+
+export const DashboardContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  padding: 4rem;
+`;
+
 export const DashboardTitle = styled.h1``;
 
-export const DashboardSubTitle = styled.h3``;
+export const DashboardSubTitle = styled.h2``;
 
 export const DashboardInput = styled.input`
   resize: none;
   outline: none;
-  width: 20%;
+  width: 350px;
   border: 1px solid #ccc;
   padding: 12px;
   transition: all 0.2s ease;
@@ -81,5 +102,3 @@ export const LoginIcon = styled.img`
   height: auto;
   padding: 1rem 0 1rem 0;
 `;
-
-export const DashboardWrapper = styled.div``;
