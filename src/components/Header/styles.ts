@@ -82,11 +82,11 @@ export const OrçButton = styled.button`
   cursor: pointer;
   font-size: 1rem;
   font-weight: 400;
-  background-color: orange;
+  background-color: #b49663;
   position: relative;
   text-decoration: none;
-  border-bottom: 4px solid #c47302ff;
-  border-right: 4px solid #c47302ff;
+  border-bottom: 4px solid #7e6b4a;
+  border-right: 4px solid #7e6b4a;
 
   transition:
     transform 0.25s ease,
@@ -101,8 +101,8 @@ export const OrçButton = styled.button`
 
     transform: translateY(-4px);
     box-shadow: none;
-    border-bottom: 4px solid rgb(150, 88, 2);
-    border-right: 4px solid rgb(150, 88, 2);
+    border-bottom: 4px solid #64553b;
+    border-right: 4px solid #64553b;
 
     &::after {
       width: 100%;
@@ -140,14 +140,14 @@ export const Button = styled.button`
     position: absolute;
     width: 0;
     height: 2px;
-    background-color: orange;
+    background-color: #7e6b4a;
     left: 0;
     bottom: 0;
     transition: width 0.4s ease-in-out;
   }
 
   &:hover {
-    color: orange;
+    color: #b49663;
   }
 
   &:hover::after {

@@ -96,7 +96,7 @@ export default function Dashboard() {
   return (
     <S.DashboardContainer>
       <S.DashboardWrapper>
-        <S.DashboardTitle>Admin - Criar Álbuns</S.DashboardTitle>
+        <S.DashboardTitle>Criar Álbuns</S.DashboardTitle>
 
         <S.DashboardInput
           placeholder="Título"
@@ -125,7 +125,7 @@ export default function Dashboard() {
           onChange={(e) => setImageInput(e.target.files?.[0] || null)}
         />
 
-        <button onClick={addImage}>Adicionar imagem</button>
+        <S.CustomButton onClick={addImage}>Adicionar imagem</S.CustomButton>
 
         <ul>
           {images.map((img, i) => (
@@ -141,12 +141,14 @@ export default function Dashboard() {
                 }}
               />
 
-              <button onClick={() => removeImage(i)}>Remover</button>
+              <S.CustomButton onClick={() => removeImage(i)}>
+                Remover
+              </S.CustomButton>
             </li>
           ))}
         </ul>
 
-        <button onClick={createProject}>Criar álbum</button>
+        <S.CustomButton onClick={createProject}>Criar álbum</S.CustomButton>
 
         <h3>Álbuns criados</h3>
 
@@ -160,13 +162,16 @@ export default function Dashboard() {
               alt=""
               style={{
                 width: 150,
-                height: 100,
+                height: 150,
+                padding: 4,
                 objectFit: 'cover',
                 display: 'block',
               }}
             />
 
-            <button onClick={() => deleteProject(p.id)}>Remover álbum</button>
+            <S.CustomButton onClick={() => deleteProject(p.id)}>
+              Remover álbum
+            </S.CustomButton>
           </div>
         ))}
       </S.DashboardWrapper>

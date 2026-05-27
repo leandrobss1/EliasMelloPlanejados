@@ -42,7 +42,6 @@ export const CustomButton = styled(HeaderStyles.OrçButton)`
   width: 100%;
   font-family: 'Source Code Pro', monospace;
   font-weight: 600;
-  margin-bottom: 0.5rem;
   border-radius: 0;
   background-color: #ffff;
   color: #000000;
@@ -63,7 +62,7 @@ export const DashboardWrapper = styled.div`
   width: fit-content;
 
   align-items: center;
-  border: 1px solid #991a1a;
+  border: 1px solid #ccc;
   box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.2);
 
   padding: 2rem;
